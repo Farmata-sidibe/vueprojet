@@ -1,28 +1,44 @@
 <template>
-    <div class="containerdash">
+<div>
+    <div class="containerdash" v-for="client in clients" :key="client.id">
         <form class="formdash">
          <h1 class="profil">Profil</h1>
         </form>
         
         <div class="dash">
         <form class="formdash1">
-        <h3 class="h3">Anne Talia</h3>
-        <p class="adres">28 RUE des pinssons,</p>
-        <p class="vicp">Euragny, 94996</p>
-        <p class="tele">0123456789</p>
+        <h3 class="h3">{{ client.nom }}</h3>
+        <p class="adres">{{ client.adresse }},</p>
+        <p class="vicp">{{ client.ville }}, {{ client.cp }}</p>
+        <p class="tele">{{ client.tel }}</p>
         <form class="rondUser">
-            
+              
+              
+    <div class="row" v-if="message !== null">
+      <div class="col-12 text-lg-center">
+        {{ message }}
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-3">
+        <div>
+          <img
+            v-if="client.image !== undefined"
+            :src="client.image"
+            class="avatar img-fluid"
+            alt="avatar"
+          />
+          <img v-else :src="pic" 
+          class="avatar img-fluid" alt="" />
+          <input class="ty" type="file" accept="image/jpeg" @change="uploadImage" />
+        </div>
+      </div>
 
-            <div class="profile-img">
-              <img src="../assets/icon-profil-user.png" alt="" class="icoUse">
-              <div class="file btn btn-lg btn-primary">
-                
-                <!-- permet d'inserer la photo  -->
-                <input type="file"
-                 id="avatar" name="avatar"
-                 accept="image/png, image/jpeg">
-              </div>
-            </div>
+    
+    </div>
+ 
+            
+           
 
         </form>
         
@@ -42,21 +58,60 @@
 <navconnecter/>
 
     </div>
+    </div>
 </template>
 
 <script>
+import VueJwtDecode from "vue-jwt-decode";
 import navconnecter from '../components/navconnecter.vue'
 export default {
     name: 'profil',
   props: ["clients"],
-    components:{
+    
+data() {
+    return {
+     client: {},
+      message: null,
+    };
+  },
+  components:{
         navconnecter
     },
-}
+
+  created: function () {
+    if (localStorage.getItem("token") === null) {
+      this.$router.push({ name: "myProfil/:id" });
+    } else {
+      this.client = VueJwtDecode.decode(localStorage.getItem("token"));
+      console.log(this.client);
+    }
+  },
+  methods: {
+     update: function() {
+      this.axios
+        .put(
+          "http://localhost:3000/client/update/" + this.client.id,
+          this.client
+        )
+        .then((res) => {
+          if (res.status === 200) {
+            localStorage.setItem("token", JSON.stringify(res.data.token));
+            this.message = "votre profil est a jour";
+          } else {
+            this.message = "error: votre profil n'est pas mis a jour";
+          }
+        })
+        .catch((err) => {
+          console.log(err);
+        });
+    },
+
+  },
+};
 </script>
 
 <style scoped>
-.containerdash{
+/*.containerdash{
     background-image: url("../assets/image-back-produit.jpg");
 background-size: cover;
 background-repeat: no-repeat;
@@ -65,7 +120,7 @@ background-repeat: no-repeat;
   height: 811px;
   width: 100%;
   
-}
+}*/
 h3.h3{
     font-size: 20px;
     font-family: 'Galada';
@@ -102,7 +157,8 @@ p.tele{
     padding: 60px 30px;
     box-sizing: border-box;
     border-radius: 9px;
-    background-color: #1f1220;
+     background:transparent;
+
     position: relative;
 }
 .formdash1{
@@ -183,6 +239,20 @@ p.tele{
 .profile-img {
     text-align: center;
   }
+  .img-fluid {
+    max-width: 10vw;
+     height: auto; 
+    position: absolute;
+    width: 125vw;
+    left: -9px;
+    top: -29px;
+}
+input.ty{
+    margin: 0;
+    font-family: inherit;
+    font-size: initial;
+    line-height: inherit;
+}
  
   /* l'emplacement file(inserer une photo) */
   .profile-img .file {
@@ -194,7 +264,8 @@ p.tele{
     border: none;
     border-radius: 50%;
     font-size: 15px;
-    background: #212529b8;
+    background: #12081b;
+
     top: -36px;
     left: -20%;
   }

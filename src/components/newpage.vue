@@ -44,7 +44,6 @@
 </script>
 
 <style scoped>
-@media screen and (min-width: 1280px) {
 .hovereffect {
   margin-right: 18px;
   width: 100%;
@@ -59,7 +58,10 @@
 .col-lg-3 {
   display: -webkit-inline-box;
     margin-top: -37px;
-    margin-left: 18px;
+    margin-left: 18px; 
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
 }
 .hovereffect .overlay {
   width: 100%;
@@ -119,8 +121,8 @@
   transform: translatey(0);
 }
 
-}
 
+/** 
 @media screen and (min-width: 1024px) and (max-width: 1279.99px) {
   .hovereffect {
   margin-right: 18px;
@@ -352,6 +354,6 @@
   transform: translatey(0);
 }
 
-}
+}*/
 
 </style>

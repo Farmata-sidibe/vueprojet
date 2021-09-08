@@ -1,0 +1,283 @@
+<template>
+   <div class="containerdash">
+        <form class="formdash">
+         <h1 class="profil">Profil</h1>
+        </form>
+        
+        <div class="dash">
+        <form class="formdash1">
+        <h3 class="h3">{{ client.nom }}</h3>
+        <p class="adres">{{ client.adresse }},</p>
+        <p class="vicp">{{ client.ville }}, {{ client.cp }}</p>
+        <p class="tele">{{ client.tel }}</p>
+        <form class="rondUser">
+              
+              
+    <div class="row" v-if="message !== null">
+      <div class="col-12 text-lg-center">
+        {{ message }}
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-3">
+        <div>
+          <img
+            v-if="client.image !== undefined"
+            :src="client.image"
+            class="avatar img-fluid"
+            alt="avatar"
+          />
+          <img v-else :src="pic" 
+          class="avatar img-fluid" alt="" />
+          <input class="ty" type="file" accept="image/jpeg" @change="uploadImage" />
+        </div>
+      </div>
+
+    
+    </div>
+ 
+            
+           
+
+        </form>
+        
+        </form>
+
+        <form class="formdash2">
+            <form class="rond">
+                <p class="prond">0</p>
+            </form>
+            <form class="rond2">
+                <p class="prond2">0</p>
+            </form>
+
+        </form>
+        </div>
+
+<navconnecteCoiffeur/>
+
+    </div>
+</template>
+<script>
+//import VueJwtDecode from "vue-jwt-decode";
+import navconnecteCoiffeur from '../components/navconnecteCoiffeur.vue'
+export default {
+  name: "profil",
+  components: {
+    navconnecteCoiffeur
+  },
+ data() {
+    return {
+      client: {},
+      message: null,
+      pic: null,
+    };
+  },
+ /* created: function() {
+    if (localStorage.getItem("token") === null) {
+      this.$router.push({ name: "Login" });
+    } else {
+      this.client = VueJwtDecode.decode(localStorage.getItem("token"));
+      console.log(this.client);
+    }
+  },*/
+  methods: {
+    uploadImage(e) {
+      const image = e.target.files[0];
+      const reader = new FileReader();
+      reader.readAsDataURL(image);
+      reader.onload = (e) => {
+        this.pic = e.target.result;
+        this.client.image = e.target.result;
+      };
+    },
+    update: function() {
+      this.axios
+        .put(
+          "http://localhost:3000/client/update/" + this.client.id,
+          this.client
+        )
+        .then((res) => {
+          if (res.status === 200) {
+            localStorage.setItem("token", JSON.stringify(res.data.token));
+            this.message = "votre profil est a jour";
+          } else {
+            this.message = "error: votre profil n'est pas mis a jour";
+          }
+        })
+        .catch((err) => {
+          console.log(err);
+        });
+    },
+  },
+};
+</script>
+<style scoped>
+.containerdash{
+    background-image: url("../assets/5fdbc30b5799f.jpg");
+background-size: cover;
+background-repeat: no-repeat;
+ position: absolute;
+  background-position: center;
+  height: 811px;
+  width: 100%;
+  
+}
+h3.h3{
+    font-size: 20px;
+    font-family: 'Galada';
+}
+p.adres{
+    font-family: 'Bodini MT';
+    font-size: 14px;
+}
+p.vicp{
+    font-family: 'Bodini MT';
+    font-size: 14px;
+    top: -55px;
+    position: relative;
+}
+p.tele{
+    font-family: 'Bodini MT';
+    font-size: 14px;
+    position: relative;
+    top: -108px;
+}
+.prond{
+    position: absolute;
+    top: 12px;
+    left: 35%;
+}
+.prond2{
+    position: absolute;
+    top: 12px;
+    left: 36%;
+}
+.formdash{
+    width: 100%;
+    height: 156px;
+    padding: 60px 30px;
+    box-sizing: border-box;
+    border-radius: 9px;
+    background-color:#12081b;
+    position: relative;
+}
+.formdash1{
+    width: 500px;
+    height: 256px;
+    padding: 60px 30px;
+    box-sizing: border-box;
+    border-radius: 9px;
+    background-color: #fff;
+    position: absolute;
+    left: 27%;
+    top: 127px;
+     box-shadow: 4px 4px 17px rgb(34, 34, 34);
+}
+.formdash2{
+    width: 500px;
+    height: 256px;
+    padding: 60px 30px;
+    box-sizing: border-box;
+    border-radius: 9px;
+    background-color: #fff;
+    position: absolute;
+    left: 27%;
+    top: 443px;
+     box-shadow: 4px 4px 17px rgb(34, 34, 34);
+}
+.rondUser{
+    width: 150px;
+    height: 141px;
+    padding: 60px 30px;
+    box-sizing: border-box;
+    border-radius: 50%;
+    background-color: #fff;
+    position: absolute;
+    box-shadow: 4px 4px 17px rgb(34, 34, 34);
+    top: -38px;
+    left: 32%;
+}
+.rond{
+    width: 123px;
+    padding: 60px 30px;
+    box-sizing: border-box;
+    border-radius: 50%;
+    background-color: #fff;
+    position: absolute;
+    box-shadow: 4px 4px 17px rgb(34, 34, 34);
+    left: 13%;
+    background-color: pink;
+}
+.rond2{
+    width: 123px;
+    padding: 60px 30px;
+    box-sizing: border-box;
+    border-radius: 50%;
+    background-color: #fff;
+    position: absolute;
+    box-shadow: 4px 4px 17px rgb(34, 34, 34);
+    left: 60%;
+    background-color: rgb(142, 185, 142);
+}
+.icoUse{
+  position: absolute;
+    width: 127px;
+    top: 8px;
+    left: 8%;
+}
+
+.profil{
+    font-size: 42px;
+    color: #fff;
+    text-align: center;
+    font-family: 'Bodini MT';
+    position: relative;
+    top: -40px;
+}
+
+
+.profile-img {
+    text-align: center;
+  }
+  .img-fluid {
+    max-width: 10vw;
+     height: auto; 
+    position: absolute;
+    width: 125vw;
+    left: -9px;
+    top: -29px;
+}
+input.ty{
+    margin: 0;
+    font-family: inherit;
+    font-size: initial;
+    line-height: inherit;
+}
+ 
+  /* l'emplacement file(inserer une photo) */
+  .profile-img .file {
+    position: relative;
+    overflow: hidden;
+    margin-top: -20%;
+    width: 127px;
+    height: 129px;
+    border: none;
+    border-radius: 50%;
+    font-size: 15px;
+    background: #212529b8;
+    top: -36px;
+    left: -20%;
+  }
+ .profile-img .file input{
+     position: absolute;
+   
+    top: 44px;
+    left: 13%;
+    
+    font-size: 12px;
+ }
+input{
+    margin: .4rem 0;
+}
+</style>

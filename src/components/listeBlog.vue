@@ -9,7 +9,7 @@
           alt="`${blog.images[0].image}`"
           class="imgarc"
         /> 
-    
+
     <div class="group"> <br>
     <p class="arc">articles,{{ blog.article }}</p>
     <h4 class="arcT">{{ blog.astuce }}</h4>

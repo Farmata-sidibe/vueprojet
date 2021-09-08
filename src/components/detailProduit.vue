@@ -10,11 +10,10 @@
       <div class="row">
         <div class="col-md-6">
           <img
-            v-if="produit.image"
-            :src="require(`@/assets/${produit.images[0].image}.jpg`)"
-            class="card-img-top"
-            alt="`${produit.images[0].image}`"
-          />
+          v-if="produit.image[0] !== undefined"
+          :src="require(`@/assets/${produit.images[0].image}.jpg`)"
+          alt="Publication Image"
+        /> 
         </div>
         <div class="col-md-6">
           <div class="paragraphe1 row">
@@ -54,8 +53,6 @@
 export default {
   name: "detailProduit",
   props: ["produits"],
-
-  
 };
 </script>
 
@@ -103,8 +100,6 @@ export default {
     text-align: center;
     border: none;
     border-radius: 5px;
-    -webkit-box-shadow: 12px 14px 22px 2px rgba(0, 0, 0, 0.75);
-    -moz-box-shadow: 12px 14px 22px 2px rgba(0, 0, 0, 0.75);
     box-shadow: 12px 14px 22px 2px rgba(0, 0, 0, 0.75);
     margin-bottom: 100px;
   }

@@ -7,15 +7,13 @@
       <i class="fas fa-times" id="cancel"></i>
     </label>
     <div class="sidebar">
-   <header>My App</header>
+   <header>Dashboard</header>
   <ul>
-<li><a href="#"><i class="fas fa-qrcode"></i>Dashboard</a></li>
-<li><a href="#"><i class="fas fa-link"></i>Shortcuts</a></li>
-<li><a href="#"><i class="fas fa-stream"></i>Overview</a></li>
-<li><a href="#"><i class="fas fa-calendar-week"></i>Events</a></li>
-<li><a href="#"><i class="far fa-question-circle"></i>About</a></li>
-<li><a href="#"><i class="fas fa-sliders-h"></i>Services</a></li>
-<li><a href="#"><i class="far fa-envelope"></i>Contact</a></li>
+<li><a href="#"><i class="fas fa-qrcode"></i>Profil</a></li>
+<li><a href="#"><i class="fas fa-calendar-week"></i>Mes Rendez-Vous</a></li>
+<li><a href="#"><i class="far fa-question-circle"></i>Prendre RDV</a></li>
+<li><a href="#"><i class="fas fa-cart-plus"></i>Boutique</a></li>
+
 </ul>
 </div>
 <section></section>
@@ -53,21 +51,23 @@ body {
   width: 250px;
   top: 13px;
   height: 100%;
-  background: #042331;
+  background: #12081b;
   transition: all .5s ease;
 }
 .sidebar header {
-  font-size: 22px;
+  font-size: 24px;
   color: white;
+  font-family: 'Spirax';
   line-height: 70px;
   text-align: center;
-  background: #063146;
+  background:#12081b;
   user-select: none;
 }
 .sidebar ul a{
   display: block;
   height: 100%;
   width: 100%;
+  font-family: 'Galada';
   line-height: 65px;
   font-size: 20px;
   color: white;
@@ -88,7 +88,7 @@ ul li:hover a{
 }
 label #btn,label #cancel{
   position: absolute;
-  background: #042331;
+  background:#12081b;
   border-radius: 3px;
   cursor: pointer;
 }
@@ -106,7 +106,7 @@ label #cancel{
   left: -195px;
   top: 17px;
   font-size: 30px;
-  color: #0a5275;
+  color: #3c3244;
   padding: 4px 9px;
   transition: all .5s ease;
 }
@@ -131,6 +131,7 @@ section{
   height: 143vh;
   transition: all .5s;
   margin: -142px 0 0 0;
+  margin-top: -268px;
 }
 
 </style>

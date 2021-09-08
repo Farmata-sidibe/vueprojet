@@ -23,7 +23,7 @@
                                   <a href="/blogBarbe">Barbe</a>
                               </div>
                               </li>
-                              <li><a href="/" class="prop">A propos</a></li>
+                              <li><a href="/Apropos" class="prop">A propos</a></li>
                         </ul>
                   </div>
             </nav>
@@ -54,14 +54,14 @@ li.dropdown{
 a.prop[data-v-688b5e20] {
    position: absolute;
     left: 60%;
-    top: 22px;
+    top: 11px;
     font-size: 30px;
     font-family: 'Spirax';
 }
 a.arti{
     position: absolute;
-    top: 22px;
-    left: 399px;
+    top: 11px;
+    left: 417px;
     font-size: 30px;
     font-family: 'Spirax';
 }
@@ -76,20 +76,21 @@ img.logoNi {
 .dropdown-content{
     display: none;
     position: absolute;
-    background-color:  #9e9697;
+       background-color: #7F6E6F;
     min-width: 160px;
     box-shadow: 5px 8px 16px 0px rgba(0, 0, 0, 0.2);
-    left: 368px;
-    top: 66px;
+   left: 367px;
+    top: 52px;
+    border-radius: 7px;
 }
 
 .dropdown-content a{
-    color:  #1f1220;
+    color:  #c4a1bf;
     padding: 13px 18px;
     text-decoration: none;
     display: block;
     text-align: left;
-    font-size: 12px;
+    font-size: 15px;
 }
 
 .dropdown-content a:hover {

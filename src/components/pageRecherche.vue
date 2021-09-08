@@ -40,24 +40,12 @@
         </div>
         
         <img src="../assets/image-princi-recherche.jpg" alt="" class="imgrecherche">
-        <p class="titre">Faites votre Réservtion Rendez-Vous <br> beauté en ligne avec un Salon de votre choix</p>
-        
-        <!--<input type="search" class="search" placeholder="nom d'un salon ou coiffeur">
-        <span><img src="../assets/loupe.png" alt="" class="glass"></span>-->
-<div id="app">
-<autocomplete
-    :search="search"
-    aria-label="Search for a salons"
-    class="search"
-    placeholder="nom d'un salon ou coiffeur"
-  ></autocomplete>
-</div>
-        <input type="text" name="searchBar" id="searchBar" class="search" placeholder="|nom d'un salon">
-        <span><img src="../assets/loupe.png" alt="" class="glass"></span>
-        
-</div>
+        <p class="titre">Faites votre Réservation Rendez-Vous <br> beauté en ligne avec un Salon de votre choix</p>
+
+
 <Salon/>
 <myFooter/>
+</div>
 </div>
 </template>
     
@@ -78,6 +66,8 @@ export default {
 
 <style scoped>
 
+
+ 
 
 @media screen and (min-width: 1280px) {
     .glass{

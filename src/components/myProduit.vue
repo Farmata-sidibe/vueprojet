@@ -7,28 +7,32 @@
 <div class="all" v-for="produit in produits" :key="produit.id">
 
    
-    <div class="card">
+    <div class="card single-publication">
     <div class="img">
+     
         <img
-          v-if="produit.image"
+          v-if="produit.image[0] !== undefined"
           :src="require(`@/assets/${produit.images[0].image}.jpg`)"
-          alt="`${produit.images[0].image}`"
-          
+          alt="Publication Image"
         /> 
-    
+        
     </div>
    <div class="top-text">
-          <div class="name">{{ produit.nom }}</div>
+          <div class="name">
+             <router-link :to="`/DTproduit/${produit.id}`">
+            {{ produit.nom }}
+            </router-link>
+            </div>
        <p>{{ produit.prix }} €</p>
       </div>
     <div class="bottom-text">
-          <div class="text1">
-{{ produit.ref }}
+           <div class="add-to-cart">
+       <a @click="ajouter(produit.id, produit.nom, produit.prix, produit.image[0].image)"
+        class="default-btn" ><button><i class="fas fa-cart-plus"></i> Add to Cart </button></a>
+            </div>
     </div>
-    <div class="btn1">
-            <a href="/DTproduit">Ajouter</a>
-          </div>
-    </div>
+    
+    
     </div>
 
 </div>
@@ -45,9 +49,65 @@ export default {
     myFooter
   },
   props: ["produits"],
-
   
-};
+  data() {
+    return {
+      Panier: [],
+    };
+  },
+  created() {
+    console.log(this.produits);
+    this.getLocalStorage();
+  },
+  methods: {
+    ajouter: function(id, nom, prix, image) {
+      alert(` le produit ${nom}`);
+      this.Panier = this.Panier || [];
+      localStorage.removeItem("panier");
+
+      if (this.Panier.length === 0) {
+        let quantite = 1;
+        this.Panier.push({
+          produitId: id,
+          nom: nom,
+          quantite: quantite,
+          prix_unitaire: prix,
+          soustotal: quantite * prix,
+          image: image,
+        });
+      } else {
+        let alreadyProduit = false;
+        this.Panier.forEach((item) => {
+          if (item.produitId === id) {
+            item.quantite++;
+            item.soustotal = item.quantite * prix;
+            alreadyProduit = true;
+          }
+        });
+        if (alreadyProduit === false) {
+          let quantite = 1;
+          this.Panier.push({
+            produitId: id,
+            nom: nom,
+            quantite: quantite,
+            prix_unitaire: prix,
+            soustotal: quantite * prix,
+            image: image,
+          });
+        }
+      }
+      localStorage.setItem("panier", JSON.stringify(this.Panier));
+    },
+
+    getLocalStorage() {
+      let getlocalSt = localStorage.getItem("panier");
+      if (getlocalSt != null || getlocalSt !== undefined) {
+        this.Panier = JSON.parse(getlocalSt);
+        console.log(this.Panier);
+      }
+    },
+  },
+}; 
 </script>
 
 
@@ -60,6 +120,19 @@ export default {
 .secPro{
     position: relative;
     overflow: hidden;
+}
+button{
+  border-radius: 5px;
+    background-color: rgb(34, 18, 44);
+    width: 50%;
+    height: 40px;
+    font-size: 14px;
+    color: rgb(247, 244, 241);
+    text-decoration: none;
+}
+button a {
+  color: rgb(247, 244, 241);
+    text-decoration: none;
 }
 
 .card{
@@ -99,11 +172,19 @@ export default {
   padding: 5px;
 }
 .card .top-text .name{
-  font-size: 18px;
+  font-size: 15px;
+  font-family: 'Galada';
+  text-decoration: none;
     font-weight: 600;
     color: #202020;
     margin-top: 28px;
     text-align: -webkit-center;
+}
+a{
+  font-size: 15px;
+  font-family: 'Galada';
+  text-decoration: none;
+   color: #202020;
 }
 .card .top-text p{
   font-size: 23px;
@@ -113,8 +194,8 @@ export default {
     margin-top: 10px;
 }
 .card .bottom-text{
-  padding: 0 20px 10px 20px;
-  margin-top: 5px;
+  padding: 0 33px 10px 20px;
+    margin-top: -98px;
   background: white;
   opacity: 0;
   visibility: hidden;
@@ -169,6 +250,19 @@ html {
 .secPro{
     position: relative;
 }
+button{
+  border-radius: 5px;
+    background-color: rgb(34, 18, 44);
+    width: 50%;
+    height: 40px;
+    font-size: 14px;
+    color: rgb(247, 244, 241);
+    text-decoration: none;
+}
+button a {
+  color: rgb(247, 244, 241);
+    text-decoration: none;
+}
 
 .card{
   height: 331px;
@@ -207,8 +301,9 @@ html {
   padding: 5px;
 }
 .card .top-text .name{
-  font-size: 18px;
+  font-size: 15px;
     font-weight: 600;
+    font-family: 'Galada';
     color: #202020;
     margin-top: 28px;
     text-align: -webkit-center;
@@ -221,8 +316,8 @@ html {
     margin-top: 10px;
 }
 .card .bottom-text{
-  padding: 0 20px 10px 20px;
-  margin-top: 5px;
+ padding: 0 33px 10px 20px;
+    margin-top: -98px;
   background: white;
   opacity: 0;
   visibility: hidden;
@@ -278,6 +373,19 @@ html {
 .secPro{
     position: relative;
 }
+button{
+  border-radius: 5px;
+    background-color: rgb(34, 18, 44);
+    width: 50%;
+    height: 40px;
+    font-size: 14px;
+    color: rgb(247, 244, 241);
+    text-decoration: none;
+}
+button a {
+  color: rgb(247, 244, 241);
+    text-decoration: none;
+}
 
 .card{
   height: 331px;
@@ -318,7 +426,8 @@ html {
   padding: 5px;
 }
 .card .top-text .name{
-  font-size: 18px;
+  font-size: 15px;
+  font-family: 'Galada';
     font-weight: 600;
     color: #202020;
     margin-top: 28px;
@@ -332,8 +441,8 @@ html {
     margin-top: 10px;
 }
 .card .bottom-text{
-  padding: 0 20px 10px 20px;
-  margin-top: 5px;
+ padding: 0 33px 10px 20px;
+    margin-top: -98px;
   background: white;
   opacity: 0;
   visibility: hidden;
@@ -390,6 +499,19 @@ html {
 .secPro{
     position: relative;
 }
+button{
+  border-radius: 5px;
+    background-color: rgb(34, 18, 44);
+    width: 50%;
+    height: 40px;
+    font-size: 14px;
+    color: rgb(247, 244, 241);
+    text-decoration: none;
+}
+button a {
+  color: rgb(247, 244, 241);
+    text-decoration: none;
+}
 
 .card{
   height: 331px;
@@ -430,7 +552,8 @@ html {
   padding: 5px;
 }
 .card .top-text .name{
-  font-size: 18px;
+  font-size: 15px;
+  font-family: 'Galada';
     font-weight: 600;
     color: #202020;
     margin-top: 28px;
@@ -444,8 +567,8 @@ html {
     margin-top: 10px;
 }
 .card .bottom-text{
-  padding: 0 20px 10px 20px;
-  margin-top: 5px;
+  padding: 0 33px 10px 20px;
+    margin-top: -98px;
   background: white;
   opacity: 0;
   visibility: hidden;

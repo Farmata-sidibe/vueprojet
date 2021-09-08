@@ -1,12 +1,12 @@
 <template>
 <div class="plan">
- <img src="../assets/arriere-plan-fleur3.jpg" alt="" class="planim">
+ <img src="../assets/kNAONghjrZ.jpg" alt="" class="planim">
      <div class="container">
        
             <div >
                 <form @submit.prevent="doupdate" class="forme">
                     
-                    <img src="../assets/image-user.png" alt=""  class="imageU">
+                    
                     <h1 class="inscription">Entrez Votre Nouveau Mot De Passe</h1>
                     
                     <i class="fas fa-envelope-square mail"></i>
@@ -32,14 +32,14 @@ export default {
     data() {
         return {
             email: "",
-            emaillogin: "",
+            password: "",
         }
     },
     components:{},
     methods:{
         doupdate: function (){
             this.axios.post("http://localhost:3000/client/updatepassword",{
-                email:this.email,
+                password:this.password
             })
             .then(res =>{
                 if(res.data.token){
@@ -68,10 +68,11 @@ export default {
 
 @media screen and (min-width: 1280px) {
     .planim{
-    position: fixed;
-    height: 120vh;
+   position: relative;
+    height: 130vh;
     width: 100%;
 }
+
 .password{
      position: absolute;
   z-index: 3;
@@ -134,13 +135,7 @@ a.forget1{
     margin: 0;
     padding: 0;
 }
-.imageU {
-    position: absolute;
-    bottom: 310px;
-    width: 135px;
-    left: 32%;
-    height: 139px;
-}
+
 .forme::placeholder{
     
     font-family: 'Bodini MT';
@@ -182,7 +177,7 @@ input{
     border: none;
     border-radius: 9px;
     border-left: 5px solid #213141;
-    background:#c0c3c7;
+    background: rgb(219, 216, 216, 0.5);
     box-shadow: 2px 2px 2px  #283b4d;
     outline: none;
   margin-bottom: 15px;
@@ -207,11 +202,11 @@ input#email{
     padding: 60px 30px;
     box-sizing: border-box;
     border-radius: 5px;
-    background: linear-gradient(90deg, #bbb7bb,#fff,#cac2ca);
+    background: rgba(211, 197, 184, 0.5);
     box-shadow: 17px -6px 23px rgb(34, 34, 34);
     position: absolute;
-    left: 25%;
-    bottom: 139px;
+    left: 32%;
+    bottom: 104px;
 }
 
 a{
@@ -368,8 +363,8 @@ input#email{
     background: linear-gradient(90deg, #bbb7bb,#fff,#cac2ca);
     box-shadow: 17px -6px 23px rgb(34, 34, 34);
     position: absolute;
-    left: 36%;
-    bottom: 139px;
+    left: 32%;
+    bottom: 104px;
 }
 
 a{

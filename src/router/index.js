@@ -5,8 +5,12 @@ import myNavAccueil from '../components/myNavAccueil.vue'
 import newpage from '../components/newpage.vue'
 
 import login from '../components/login.vue'
+import Accueil from '../components/Accueil.vue'
+
 import registerClient from '../components/registerClient.vue'
 import registerCoiffeur from '../components/registerCoiffeur.vue'
+import profilCoiffeur from '../components/profilCoiffeur.vue'
+
 
 import registerSalon from '../components/registerSalon.vue'
 import pageRecherche from '../components/pageRecherche.vue'
@@ -17,13 +21,15 @@ import calendrier from '../components/calendrier.vue'
 
 /*import myProduit from '../components/myProduit.vue'*/
 
-import DTproduit from '../views/DTproduit.vue'
+import DTproduit from '../components/DTproduit.vue'
 
 import Salon from '../views/Salon.vue'
 import myBlog from '../views/myBlog.vue'
 
 import Produit from '../views/Produit.vue'
 import navproduit from '../components/navproduit.vue'
+import RDV from '../components/RDV.vue'
+import Apropos from '../components/Apropos.vue'
 
 
 
@@ -38,11 +44,22 @@ import entretienBarbe from '../components/entretienBarbe.vue'
 import pousseBarbe from '../components/pousseBarbe.vue'
 import trouBarbe from '../components/trouBarbe.vue'
 
+import panier from '../views/panier.vue'
+import paypal from '../components/paypal.vue'
+import adminhome from '../components/admin/home.vue'
+import userhome from '../components/user/home.vue'
+import log from '../components/log.vue'
+
+
+
+
 
 
 import footerBlog from '../components/footerBlog.vue'
 import blogCoiffure from '../components/blogCoiffure.vue'
 import navconnecter from '../components/navconnecter.vue'
+import navconnecteCoiffeur from '../components/navconnecteCoiffeur.vue'
+
 import navbar from '../components/navbar.vue'
 import prestation from '../components/prestation.vue'
 import presta from '../components/presta.vue'
@@ -52,6 +69,10 @@ import artSoinTresse from '../components/artSoinTresse.vue'
 import artSoinCrepus from '../components/artSoinCrepus.vue'
 
 import updatepassword from '../components/updatepassword.vue'
+import msgvalide from '../components/msgvalide.vue'
+import validemail from '../components/validemail.vue'
+
+
 
 
 
@@ -64,7 +85,12 @@ import updatepassword from '../components/updatepassword.vue'
 Vue.use(VueRouter)
 
 const routes = [{
-        path: '/',
+        path: '/Accueil',
+        name: 'Accueil',
+        component: Accueil
+    },
+    {
+        path: '/myNavAccueil',
         name: 'myNavAccueil',
         component: myNavAccueil
     },
@@ -72,6 +98,26 @@ const routes = [{
         path: '/navbar',
         name: 'navbar',
         component: navbar
+    },
+    {
+        path: '/Accueil',
+        name: 'Accueil',
+        component: Accueil
+    },
+    {
+        path: '/RDV',
+        name: 'RDV',
+        component: RDV
+    },
+    {
+        path: '/',
+        name: 'Apropos',
+        component: Apropos
+    },
+    {
+        path: '/profilCoiffeur',
+        name: 'profilCoiffeur',
+        component: profilCoiffeur
     },
     {
         path: '/reservationfin',
@@ -124,6 +170,16 @@ const routes = [{
         component: updatepassword
     },
     {
+        path: '/msgvalide',
+        name: 'msgvalide',
+        component: msgvalide
+    },
+    {
+        path: '/validemail',
+        name: 'validemail',
+        component: validemail
+    },
+    {
         path: '/newpage',
         name: 'newpage',
         component: newpage
@@ -144,11 +200,7 @@ const routes = [{
         name: 'DTproduit',
         component: DTproduit
     },
-    /*{
-        path: '/myProduit',
-        name: 'myProduit',
-        component: myProduit
-    },*/
+
     {
         path: '/blogBarbe',
         name: 'blogBarbe',
@@ -196,6 +248,31 @@ const routes = [{
         component: login
     },
     {
+        path: '/paypal',
+        name: 'paypal',
+        component: paypal
+    },
+    {
+        path: '/user/home',
+        name: 'userhome',
+        component: userhome
+    },
+    {
+        path: "/panier",
+        name: "panier",
+        component: panier
+    },
+    {
+        path: '/admin/log',
+        name: 'adminlog',
+        component: log
+    },
+    {
+        path: '/admin/home',
+        name: 'adminhome',
+        component: adminhome
+    },
+    {
         path: '/search',
         name: 'search',
         component: search
@@ -219,6 +296,11 @@ const routes = [{
         path: '/navconnecter',
         name: 'navconnecter',
         component: navconnecter
+    },
+    {
+        path: '/navconnecteCoiffeur',
+        name: 'navconnecteCoiffeur',
+        component: navconnecteCoiffeur
     },
     {
         path: '/registerClient',
@@ -250,15 +332,6 @@ const routes = [{
         name: 'Salon',
         component: Salon
     },
-
-    {
-        path: '/validemail/:email',
-        name: 'validemail',
-        component: () =>
-            import ("../components/validemail.vue"),
-    },
-
-
 
 ]
 

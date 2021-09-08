@@ -1,16 +1,10 @@
 <template>
 <div class="plan">
- <img src="../assets/arriere-plan-fleur-coté-2.jpg" alt="" class="planim">
+ <img src="../assets/JMxplaVBD4.jpg" alt="" class="planim">
      <div class="container">
-       
+       <a href="/" class="retour"><button class="btnretour">Retour</button></a>
             <div >
-                 <form class="formimage">
-                   
-                </form>
-                
                 <form @submit.prevent="dompo" class="forme">
-                    
-                    <img src="../assets/image-user.png" alt=""  class="imageU">
                     <h1 class="inscription">Réinitialiser Mot De Passe</h1>
                     
                     <i class="fas fa-envelope-square mail"></i>
@@ -68,7 +62,24 @@ export default {
 </script>
 <style scoped>
 
-
+.retour{
+    color: rgb(214, 155, 99);
+    font-size: 30px;
+    font-weight: bold;
+    font-family: 'Galada';
+        position: sticky;
+    margin-left: 45px;
+}
+.btnretour{
+   border-radius: 7px;
+    background: transparent;
+    outline: none;
+    height: 58px;
+    width: 141px;
+    box-shadow: 2px 2px 0px 0px #e2a967 !important;
+    border-width: 2px;
+    
+}
 
 @media screen and (min-width: 1280px) {
     .planim{
@@ -78,7 +89,7 @@ export default {
 }
 a.forget{
   text-decoration: none;
-  color:  #283b4d;
+  color:   #1f1220 ;
     position: relative;
     left: 76%;
     top: 45px;
@@ -87,7 +98,7 @@ a.forget{
 }
 a.forget1{
   text-decoration: none;
-    color: #283b4d;
+    color: #1f1220 ;
     position: relative;
     left: -18%;
     top: 45px;
@@ -102,7 +113,7 @@ a.forget1{
    position: absolute;
     z-index: 3;
     font-size: 24px;
-    color: #283b4d;
+    color:  #1f1220 ;
     left: 15%;
     TOP: 133px;
 }
@@ -113,7 +124,7 @@ a.forget1{
 
 
 ::placeholder{
-    color:#283b4d;
+    color: #1f1220 ;
     font-size: 13px;
     font-family: 'Bodini MT';
 }
@@ -122,13 +133,7 @@ a.forget1{
     margin: 0;
     padding: 0;
 }
-.imageU {
-    position: absolute;
-    bottom: 194px;
-    width: 118px;
-    left: 32%;
-    height: 124px;
-}
+
 .forme::placeholder{
     
     font-family: 'Bodini MT';
@@ -137,8 +142,8 @@ a.forget1{
 .inscrit{
     border: none;
     border-radius: 5px;
-    background: #304558;
-    box-shadow: -6px 2px 4px 2px #283b4d;
+    background: #684120 ;
+    box-shadow: -6px 2px 4px 2px  #6d4a29 ;
     color: white;
     font-size: 21px;
     outline: none;
@@ -148,7 +153,7 @@ a.forget1{
     position: absolute;
     top: 229px;
     left: 592px;
-    border-color: #304558;
+    border-color: #64523a ;
     border-left-style: groove;
     border-right-style: groove;
     border-top-style: groove;
@@ -164,14 +169,14 @@ a.forget1{
     text-decoration: underline;
     font-weight: bold;
     font-size: 24px;
-    color: #212e3b;
+    color:  #492d16 ;
 }
 input{
     border: none;
     border-radius: 9px;
-    border-left: 5px solid #213141;
-    background:#c0c3c7;
-    box-shadow: 2px 2px 2px  #283b4d;
+     border-left: 5px solid #d18e50;
+    background-color: rgba(226, 187, 155, 0.5);
+    box-shadow: 2px 2px 2px  #7a7a79;
     outline: none;
   margin-bottom: 15px;
   font-size: initial;
@@ -185,40 +190,24 @@ input#email{
     width: 75%;
     height: 47px;
     bottom: 77px;
-    border-left-color: #283b4d;
+    border-left-color: #a37f46;
     left: 12%;
 }
 
 .forme{
-        width: 347px;
+    width: 347px;
     height: 258px;
     padding: 60px 30px;
     box-sizing: border-box;
     border-radius: 5px;
-    background: linear-gradient(90deg, #bbb7bb,#fff,#cac2ca);
-    box-shadow: 17px -6px 23px rgb(34, 34, 34);
+    /*background: linear-gradient(90deg, #bbb7bb,#fff,#cac2ca);*/
+   background-color: rgba(236, 210, 181, 0.5);
+    box-shadow: -4px -6px 23px rgb(34, 34, 34);
     position: absolute;
-    left: 21%;
-    bottom: 135px;
+        left: 34%;
+    bottom: 200px;
 }
-.formimage{
-    width: 367px;
-    height: 455px;
-    padding: 60px 30px;
-    box-sizing: border-box;
-    border-radius: 20px;
-    background-color: #1f1220;
-    background-blend-mode: difference;
-    position: absolute;
-    left: 44%;
-    bottom: 44px;
-    box-shadow: 2px 2px 12px rgb(34, 34, 34);
-    background-image: url("../assets/baclog.jpg");
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: 100%;
-    background-size: cover;
-}
+
 a{
     position: absolute;
     left: -137%;
@@ -360,24 +349,7 @@ input#email{
     left: 30%;
     bottom: 173px;
 }
-.formimage{
-    width: 367px;
-    height: 455px;
-    padding: 60px 30px;
-    box-sizing: border-box;
-    border-radius: 20px;
-    background-color: #1f1220;
-    background-blend-mode: difference;
-    position: absolute;
-    left: 54%;
-    bottom: 80px;
-    box-shadow: 2px 2px 12px rgb(34, 34, 34);
-        background-image: url("../assets/baclog.jpg");
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: 100%;
-    background-size: cover;
-}
+
 a{
     position: absolute;
     left: -137%;

@@ -21,7 +21,7 @@ export default {
   },
   created() {
     this.axios
-      .get("http://localhost:3000/produit/all")
+      .get("http://localhost:3000/produit/p-all")
       .then((res) => {
       console.log(res);
         this.produits = res.data.produits;

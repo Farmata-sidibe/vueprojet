@@ -6,7 +6,7 @@
         data-name="MySlideName"
         @slideclick="handleSlideClick">
         
-     <a href="/Produit"><img src="../assets/butter-cream-keracare-natural-textures-p-image-272402-grande.jpg" alt="" class="imgsli"></a>
+     <a href="/Produit"><img src="../assets/butter-cream-keracare-natural-textures.jpg" alt="" class="imgsli"></a>
    
     </slide>
   <slide>
@@ -14,28 +14,28 @@
   </slide>
   
    <slide>
-    <a href="/Produit"><img src="../assets/as-i-am-jbco--restore---repair----water--spray-hydratant----454ml-p-image-277884-grande.jpg" alt="" class="imgsli"></a>
+    <a href="/Produit"><img src="../assets/as-i-am-jbco--restore---repair----water--spray-hydratant----454ml.jpg" alt="" class="imgsli"></a>
   </slide>
    <slide>
     <a href="/Produit"><img src="../assets/gamme-hibiscus-kalia-nature-produit.jpg" alt="" class="imgsli"></a>
   </slide>
    <slide>
-    <a href="/Produit"><img src="../assets/butter-cream-keracare-natural-textures-p-image-276577-grande.jpg" alt="" class="imgsli"></a>
+    <a href="/Produit"><img src="../assets/butter-cream-keracare-natural-textures.jpg" alt="" class="imgsli"></a>
   </slide>
    <slide>
-    <a href="/Produit"><img src="../assets/baume-fondant-a-l-hibiscus-kalia-nature-100ml-p-image-277768-grande.jpg" alt="" class="imgsli"></a>
+    <a href="/Produit"><img src="../assets/baume-fondant-a-l-hibiscus-kalia-nature.jpg" alt="" class="imgsli"></a>
   </slide>
    <slide>
-    <a href="/Produit"><img src="../assets/masque-reconstructeur-intense-keracare-p-image-267002-grande.jpg" alt="" class="imgsli"></a>
+    <a href="/Produit"><img src="../assets/masque-reconstructeur-intense-keracare.jpg" alt="" class="imgsli"></a>
   </slide>
    <slide>
-    <a href="/Produit"><img src="../assets/lotion-naturelle-hydratante---design-essentials-p-image-260388-grande.png" alt="" class="imgsli"></a>
+    <a href="/Produit"><img src="../assets/lotion-naturelle-hydratante---design-essentials.png" alt="" class="imgsli"></a>
   </slide>
   <slide>
-    <a href="/Produit"><img src="../assets/activateur-de-boucles-curlessence-moisturizing-curl-activator-p-image-275758-grande.jpg" alt="" class="imgsli"></a>
+    <a href="/Produit"><img src="../assets/activateur-de-boucles-curlessence-moisturizing-curl-activator.jpg" alt="" class="imgsli"></a>
   </slide>
   <slide>
-    <a href="/Produit"><img src="../assets/baume-au-karite-nourrissant-chouette-mama-p-image-275688-grande.jpg" alt="" class="imgsli"></a>
+    <a href="/Produit"><img src="../assets/baume-au-karite-nourrissant-chouette-mama.jpg" alt="" class="imgsli"></a>
   </slide>
   
   
@@ -59,6 +59,11 @@ export default {
 </script>
 
 <style scoped>
+*{
+    box-sizing: border-box;
+    margin: Opx;
+    padding: 0px;
+}
 @media screen and (min-width: 1280px){
 .imgsli{
     width: 277px;

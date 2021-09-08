@@ -1,1589 +1,986 @@
 <template>
-<div>
-      
+    <div>
+<!-- header section starts  -->
 
-  <div id="wrap">
-  <div class="container">
-            <nav>
-                  <input type="checkbox" id="nav" class="hidden">
-                  <label for="nav" class="nav-btn">
-                        <i></i>
-                        <i></i>
-                        <i></i>
-                  </label>
-                  <div >
-                        <a href="#" class="alogo"><img src="../assets/logo-haira.png" alt="" class="logo" ></a>
-                  </div>
-                  <div class="nav-wrapper">
-                        <ul>
-                              <li><a href="/">Accueil</a></li>
-                              <li><a href="/blog">Blog</a></li>
-                              <li class="dropdown">
-                                  <a href="/pageRecherche">Institut de beauté</a>
-                              <div class="dropdown-content">
-                                  <a href="/pageRecherche">Coiffeur</a>
-                                  <a href="/pageRecherche">Barbier</a>
-                              </div>
-                              </li>
-                              <li><a href="/navproduit"><i class="fas fa-cart-plus"></i>Boutique</a></li>
-                        </ul>
-                  </div>
-                   <div class="compte">
-                            <a href="/login"><i class="fas fa-user-circle"></i>Compte</a>
-                        </div>
-            </nav>
-      </div>
+<header>
 
-  </div>
+    <a href="#" class="logo"><span>best</span>App</a>
 
-<div class="all">
-  <presta/>
+    <input type="checkbox" id="menu-bar">
+    <label for="menu-bar" class="fas fa-bars"></label>
+
+    <nav class="navbar">
+        <a href="#home">home</a>
+        <a href="#features">features</a>
+        <a href="#about">about</a>
+        <a href="#review">review</a>
+        <a href="#pricing">pricing</a>
+        <a href="#contact">contact</a>
+    </nav>
+
+</header>
+
+<!-- header section ends -->
+
+<!-- home section starts  -->
+
+<section class="home" id="home">
+
+    <div class="contentF">
+        <h3>best mobile app <span>showcase</span></h3>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus suscipit porro nam libero natus error consequatur sed repudiandae eos quo?</p>
+        <a href="#" class="btn">download now</a>
+    </div>
+
+    <div class="imageF">
+        <img src="../assets/peignehomeepng.png" alt="">
+    </div>
+
+</section>
+
+<!-- home section ends -->
+
+<!-- features section starts  -->
+
+<section class="features" id="features">
+
+    <h1 class="heading"> app features </h1>
+
+    <div class="box-container">
+
+        <div class="box">
+            <img src="../assets/f-icon1.png" alt="">
+            <h3>amazing UI design</h3>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ullam minus recusandae autem, repellendus fugit quaerat provident voluptatum non officiis ratione.</p>
+            <a href="#" class="btn">read more</a>
+        </div>
+
+        <div class="box">
+            <img src="../assets/f-icon2.png" alt="">
+            <h3>soft and smooth animations</h3>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ullam minus recusandae autem, repellendus fugit quaerat provident voluptatum non officiis ratione.</p>
+            <a href="#" class="btn">read more</a>
+        </div>
+
+        <div class="box">
+            <img src="../assets/f-icon3.png" alt="">
+            <h3>freindly interactions</h3>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ullam minus recusandae autem, repellendus fugit quaerat provident voluptatum non officiis ratione.</p>
+            <a href="#" class="btn">read more</a>
+        </div>
+
+    </div>
+
+</section>
+
+<!-- features section ends -->
+
+<!-- about section starts  -->
+
+<section class="about" id="about">
+
+    <h1 class="heading"> about the app </h1>
+
+    <div class="column">
+
+        <div class="imageF">
+            <img src="../assets/about-img.png" alt="">
+        </div>
+
+        <div class="contentF">
+            <h3>Easy And Perfect Solution For Your Business App</h3>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nulla placeat deserunt saepe repudiandae veniam soluta minima dolor hic aperiam iure.</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium, quaerat. Dolorem ratione saepe magni quo inventore porro ab voluptates eos, nam eius provident accusantium, quia similique est, repellendus et reiciendis.</p>
+            <div class="buttonsF">
+                <a href="#" class="btn"> <i class="fab fa-apple"></i> app store </a>
+                <a href="#" class="btn"> <i class="fab fa-google-play"></i> google-play </a>
+            </div>
+        </div>
+
+    </div>
+
+</section>
+
+<!-- about section ends -->
+
+<!-- newsletter  -->
+
+<div class="newsletter">
+
+    <h3>Subscribe For New Features</h3>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus sed aliquam quibusdam neque magni magnam est laborum doloribus, facere dolores.</p>
+    <form action="">
+        <input type="email" placeholder="enter your email">
+        <input type="submit" value="Subscribe">
+    </form>
+
 </div>
 
+<!-- review section starts  -->
 
-<div class="section1">
-<form class="totalform">
-<h2>Welcom to Hairstyle</h2>
-<p class="phairdo">Notre objectif principale est de permettre 
-au coiffeur d'ajouter  leur institut, d'assurer 
-leur visibilité et celle des coiffeur à domicile dans le marché.
-   Ceci permettra à la clientéle d'avoir la
-  possibilité de faire  sa réservation de rendez-vous beauté 
-  en ligne avec le salon de son choix.
-</p>
-</form>
+<section class="review" id="review">
+
+    <h1 class="heading"> people's review </h1>
+
+    <div class="box-container">
+
+        <div class="box">
+            <i class="fas fa-quote-right"></i>
+            <div class="userF">
+                <img src="../assets/pic1.png" alt="">
+                <h3>john deo</h3>
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                </div>
+                <div class="comment">
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Possimus et, perspiciatis nisi tempore aspernatur accusantium sed distinctio facilis aperiam laborum autem earum repellat, commodi eum. Ullam cupiditate expedita officiis obcaecati?
+                </div>
+            </div>
+        </div>
+
+        <div class="box">
+            <i class="fas fa-quote-right"></i>
+            <div class="userF">
+                <img src="../assets/pic2.png" alt="">
+                <h3>john deo</h3>
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star-half-alt"></i>
+                </div>
+                <div class="comment">
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Possimus et, perspiciatis nisi tempore aspernatur accusantium sed distinctio facilis aperiam laborum autem earum repellat, commodi eum. Ullam cupiditate expedita officiis obcaecati?
+                </div>
+            </div>
+        </div>
+
+        <div class="box">
+            <i class="fas fa-quote-right"></i>
+            <div class="userF">
+                <img src="../assets/pic3.png" alt="">
+                <h3>john deo</h3>
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="far fa-star"></i>
+                </div>
+                <div class="comment">
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Possimus et, perspiciatis nisi tempore aspernatur accusantium sed distinctio facilis aperiam laborum autem earum repellat, commodi eum. Ullam cupiditate expedita officiis obcaecati?
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</section>
+
+<!-- review section ends -->
+
+<!-- pricing section starts  -->
+
+<section class="pricing" id="pricing">
+
+    <h1 class="heading"> Our Pricing Plans </h1>
+
+    <div class="box-container">
+
+        <div class="box">
+            <h3 class="title">basic</h3>
+            <div class="price">$10<span>/monthly</span></div>
+            <ul>
+                <li> <i class="fas fa-check"></i> 1000+ downloads </li>
+                <li> <i class="fas fa-check"></i> No transaction fees </li>
+                <li> <i class="fas fa-times"></i> unlimited storage </li>
+                <li> <i class="fas fa-times"></i> 5 downloads </li>
+            </ul>
+            <a href="#" class="btn">check out</a>
+        </div>
+
+        <div class="box">
+            <h3 class="title">standard</h3>
+            <div class="price">$15<span>/monthly</span></div>
+            <ul>
+                <li> <i class="fas fa-check"></i> 1000+ downloads </li>
+                <li> <i class="fas fa-check"></i> No transaction fees </li>
+                <li> <i class="fas fa-check"></i> unlimited storage </li>
+                <li> <i class="fas fa-times"></i> 5 downloads </li>
+            </ul>
+            <a href="#" class="btn">check out</a>
+        </div>
+
+        <div class="box">
+            <h3 class="title">premium</h3>
+            <div class="price">$25<span>/monthly</span></div>
+            <ul>
+                <li> <i class="fas fa-check"></i> 1000+ downloads </li>
+                <li> <i class="fas fa-check"></i> No transaction fees </li>
+                <li> <i class="fas fa-check"></i> unlimited storage </li>
+                <li> <i class="fas fa-check"></i> 5 downloads </li>
+            </ul>
+            <a href="#" class="btn">check out</a>
+        </div>
+
+    </div>
+
+</section>
+
+<!-- pricing section ends -->
+
+<!-- contact section starts  -->
+
+<section class="contact" id="contact">
+
+    <div class="imageF">
+        <img src="../assets/contact-img.png" alt="">
+    </div>
+
+    <form action="">
+
+        <h1 class="heading">contact us</h1>
+
+        <div class="inputBox">
+            <input type="text" required>
+            <label>name</label>
+        </div>
+
+        <div class="inputBox">
+            <input type="email" required>
+            <label>email</label>
+        </div>
+
+        <div class="inputBox">
+            <input type="number" required>
+            <label>phone</label>
+        </div>
+
+        <div class="inputBox">
+            <textarea required name="" id="" cols="30" rows="10"></textarea>
+            <label>message</label>
+        </div>
+
+        <input type="submit" class="btn" value="send message">
+
+    </form>
+
+</section>
+
+<!-- contact section edns -->
+
+<!-- footer section starts  -->
+
+<div class="footer">
+
+    <div class="box-container">
+
+        <div class="box">
+            <h3>about us</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet pariatur rerum consectetur architecto ad tempora blanditiis quo aliquid inventore a.</p>
+        </div>
+
+        <div class="box">
+            <h3>quick links</h3>
+            <a href="#">home</a>
+            <a href="#">features</a>
+            <a href="#">about</a>
+            <a href="#">review</a>
+            <a href="#">pricing</a>
+            <a href="#">contact</a>
+        </div>
+
+        <div class="box">
+            <h3>follow us</h3>
+            <a href="#">facebook</a>
+            <a href="#">instagram</a>
+            <a href="#">pinterest</a>
+            <a href="#">twitter</a>
+        </div>
+
+        <div class="box">
+            <h3>contact info</h3>
+            <div class="info">
+                <i class="fas fa-phone"></i>
+                <p> +123-456-7890 <br> +111-2222-333 </p>
+            </div>
+            <div class="info">
+                <i class="fas fa-envelope"></i>
+                <p> example@gmail.com <br> example@gmail.com </p>
+            </div>
+            <div class="info">
+                <i class="fas fa-map-marker-alt"></i>
+                <p> mumbai, india - 400104 </p>
+            </div>
+        </div>
+
+    </div>
+
+    <h1 class="credit"> &copy; copyright @ 2021 by mr. web designer </h1>
+
 </div>
-  
 
-<div class="ctn1">
-      
-<h4>Découvrez les instituts de beauté</h4>
-<p class="para">
-      Envie d'une nouvelle coupe ou d'une barbe bien déssiné? Nous vous présentons les meilleurs 
-instituts de beauté. Choisissez et reversez votre rendez-vous 
-avec des coiffeurs experts qui vous proposeront des coiffures aà la hauteur de vos attentes.
-</p>
-</div>
-  
-
- 
-
-
-<div>
-<newpage/>
-</div>
-
-<div class="prod">
-    <div class="trait"></div>
-    <div class="trait2"></div>
-
-    <h2 class="nouv">Nouveautés</h2>
-    <p class="nouvp">Découvrez les nouveaux produits capillaires pour réparer et redonner vie à vos cheveux.</p>
-    <prestation/>
-</div>
-
-<div class="ctn2">
-    <h3 class="lire"><a href="/blog">Lire notre blog</a> </h3>
-</div>
-
-
-<myFooter/>
-  </div>
+<!-- footer section ends -->
+    </div>
 </template>
 
 <script>
-import prestation from '../components/prestation.vue'
-import myFooter from '../components/myFooter.vue'
-
-
-import presta from '../components/presta.vue'
-import newpage from '../components/newpage.vue'
-
-
-
 export default {
-  name: "myMenu",
-  components: {
-        presta,
-       newpage,
-       prestation,
-       myFooter,
-       
-  }
-};
+    name: "Apropos"
+}
 </script>
 
 <style scoped>
-* {
-      box-sizing: border-box;
-       margin: 0;
-      padding: 0;
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400&display=swap');
+
+:root{
+    --purple:#814096;
+    --pink:#F83292;
+    --gradient:linear-gradient(90deg, var(--purple), var(--pink));
 }
-@media screen and (min-width: 1280px){
-    
-.lire a{
+
+*{
+    font-family: 'Poppins', sans-serif;
+    margin:0; padding:0;
+    box-sizing: border-box;
     text-decoration: none;
-     font-size: 67px;
-    color: #1f1220;
-    font-family: 'Galada';
-    font-weight: 500;
+    outline: none; border:none;
     text-transform: capitalize;
-    text-align: -webkit-center;
-    position: relative;
-    left: 37%;
-    top: 223px;
 }
-.ctn2 {
-        width: 100%;
-        height: 95vh;
-        background-image: url("../assets/imgfleur3.jpg");
-        /*-moz-background-inline-policy: ;mettre l'image en couverture*/
-        background-attachment: fixed;
-        background-position-x: right;
-    margin-top: 66%;
-   
+
+*::selection{
+    background:var(--pink);
+    color:#fff;
+}
+
+html{
+    font-size: 62.5%;
+    overflow-x: hidden;
+}
+
+body{
+    background:#f9f9f9;
+}
+
+section{
+    min-height: 100vh;
+    padding:0 9%;
+    padding-top: 73.5px;
+    padding-bottom: 113px;
+}
+
+.btn{
+    display: inline-block;
+    margin-top: 10px;
+    padding:.8px 3px;
+    border-radius: 5px;
+    background:var(--gradient);
+    font-size: 17px;
+    color:#fff;
+    cursor: pointer;
+    box-shadow: 0 .5px 1px rgba(0,0,0,.1);
+    transition: all .3s linear;
+}
+
+.btn:hover{
+    transform: scale(1.1);
+}
+
+.heading{
+    text-align: center;
+    background:var(--gradient);
+    color:violet;
+    -webkit-background-clip: text;
+    background-clip: text;
+    font-size: 40px;
+    text-transform: uppercase;
+    padding:25px;
+}
+
+header{
+    position: fixed;
+    top:0; left:0;
+    width:100%;
+    background:#fff;
+    box-shadow: 0 .5px 1px rgba(0,0,0,.1);
+    padding:2px 9%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 1000;
+}
+
+header .logo{
+    font-size: 25px;
+    color:var(--purple);
+}
+
+header .logo span{
+    color:var(--pink);
+}
+
+header .navbar a{
+    font-size: 17px;
+    margin-left: 27px;
+    color:var(--purple);
+}
+
+header .navbar a:hover{
+    color:var(--pink);
+}
+
+header input{
+    display: none;
+}
+
+header label{
+    font-size: 10px;
+    color:var(--purple);
+    cursor: pointer;
+    visibility: hidden;
+    opacity: 0;
+}
+
+.home{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background:url("../assets/home-bg-img.png") no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.home .imageF img{
+    width:40vw;
+    animation: float 3s linear infinite;
+}
+
+@keyframes float{
+    0%, 100%{
+        transform: translateY(4px);
     }
-.prod{
-    position: relative;
-    top: 80px;
-    HEIGHT: 1px;
+    50%{
+        transform: translateY(-9.5px);
+    }
 }
-.nouv{
-       font-size: 52px;
-       color: #1f1220;
-    font-family: 'Spirax';
-    font-weight: 500;
-    text-transform: capitalize;
-    text-align: -webkit-center;
+
+.home .contentF h3{
+   font-size: 43.5px;
+    color:#333;
+    text-transform: uppercase;
+}
+
+.home .contentF h3 span{
+    color:var(--pink);
+    text-transform: uppercase;
+}
+
+.home .contentF p{
+    font-size: 16.7px;
+    color:#666;
+    padding:1px 0;
+}
+
+.features .box-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.features .box-container .box{
+    flex:1 1 30px;
+    background:#fff;
+    border-radius: .5px;
+    border:.1px solid rgba(0,0,0,.2);
+    box-shadow: 0 .5px 1px rgba(0,0,0,.1);
+    margin:1.5px;
+    padding:3px 2px;
+    border-radius: .5px;
+    text-align: center;
+    transition: .2s linear;
+}
+
+.features .box-container .box img{
+    height: 106px;
+}
+
+.features .box-container .box h3{
+    font-size: 30px;
+    color:#333;
+    padding-top: 15px;
+}
+
+.features .box-container .box p{
+    font-size: 17.3px;
+    color:#666;
+    padding: 15px 0;
+}
+
+.about{
+    background:url("../assets/about-bg.png") no-repeat;
+    background-size: cover;
+    background-position: center;
+    padding-bottom: 3px;
+}
+
+.about .column{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.about .column .imageF{
+    flex:1 1 40px;
+}
+
+.about .column .imageF img{
+    width:100%;
+}
+
+.about .column .contentF{
+    flex:1 1 40px;
+}
+
+.about .column .contentF h3{
+    font-size: 27px;
+    color:#666;
+}
+
+.about .column .contentF p{
+    font-size: 16.5px;
+    color:#666;
+    padding:10px 0;
+}
+
+.about .column .contentF .buttonsF a:last-child{
     margin-left: 2px;
 }
-.nouvp{
-     font-size: 20px;
-    color: #1f1220b0;
-    font-family: 'Bodini MT';
-    font-weight: 500;
-    text-align: -webkit-center;
-    width: 34%;
-    margin-left: 442px;
-}
-.trait{
-    width: 25%;
-    background-color: #1f1220;
-    height: 1px;
-    margin-left: 145px;
-    margin-top: 28px;
-    position: absolute;
-}
-.trait2{
-        width: 25%;
-    background-color: #1f1220;
-    height: 1px;
-    margin-left: 870px;
-    margin-top: 28px;
-    position: absolute;
+
+.newsletter{
+    text-align: center;
+    padding: 106px 12px;
+    background:url("../assets/subscribe-bg.png") no-repeat;
+    background-size: cover;
+    background-position: center;
 }
 
-
-h4{
-      color: #f1f1f1;
-    font-size: 45px;
-    position: absolute;
-    top: 235%;
-    left: 28%;
-    font-family: 'Spirax';
+.newsletter h3{
+    color:#fff;
+    font-size: 30px;
+    text-transform: uppercase;
 }
-.para{
-    color: #f1f1f1;
+
+.newsletter p{
+    color:#fff;
+    font-size: 11.6px;
+    margin: 2px auto;
+    width: 437px;
+}
+
+.newsletter form{
+    display: flex;
+    max-width: 500px;
+    border: .2px solid #fff;
+    padding: 3.5px;
+    border-radius: 19px;
+    margin: 9px auto;
+    height: 35.5px;
+}
+
+.newsletter form input[type="email"]{
+    padding:0 2px;
+    font-size: 14.7px;
+    background:none;
+    width:100%;
+    color:#fff;
+    text-transform: none;
+    background:none;
+}
+
+.newsletter form input[type="email"]::placeholder{
+    color:#eee;
+    text-transform: capitalize;
+}
+
+.newsletter form input[type="submit"]{
+    background:#fff;
+    width: 161px;
+    font-size: 15.7px;
+    border-radius: 14px;
+    cursor: pointer;
+}
+
+.newsletter form input[type="submit"]:hover{
+    color:var(--pink);
+}
+
+.review .box-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.review .box-container .box{
+    background:rgb(255, 255, 255);
+    margin:1px;
+    padding:1px;
+    text-align: center;
+    position: relative;
+    border:.1px solid rgba(0,0,0,.2);
+    box-shadow: 0 .5px 1px rgba(0,0,0,.1);
+    flex:1 1 30px;
+    border-radius: .5px;
+}
+
+.review .box-container .box .fa-quote-right{
+    position: absolute;
+    top:1px; right:2px;
+    font-size: 57px;
+    color:var(--pink);
+    opacity: .3;
+}
+
+.review .box-container .box .userF img{
+    border-radius: 50%;
+    object-fit: cover;
+    height: 151px;
+    width:151px;
+    margin-top: 2px;
+}
+
+.review .box-container .box .userF h3{
+    color:var(--pink);
+    font-size: 20px;
+}
+
+.review .box-container .box .userF .stars i{
+    color:var(--purple);
     font-size: 25px;
-    position: absolute;
-    top: 248%;
-    left: 21%;
-    font-family: 'Bodini MT';
-    width: 61%;
-    text-align: -webkit-center;
+    padding:1px 0;
 }
 
-
-
-.section1{
-    position: relative;
-    background-color: #7F6E6F;
-    top: 894px;
+.review .box-container .box .comment{
+    color:#666;
+    font-size: 14px;
+    padding:1px;
 }
 
-.totalform{
-        width: 862px;
-    height: 371px;
-    left: 18%;
-    top: -82px;
-    z-index: 3;
-    padding: 60px 30px;
-    box-sizing: border-box;
-    background-color: #ffffff;
-    position: relative;
-    box-shadow: 4px 4px 17px rgb(34, 34, 34);
+.pricing .box-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
 }
 
-.phairdo{
-  font-size: 21px;
-    color: #1f1220;
-    text-align: -webkit-auto;
-    font-family: 'Bodini MT';
-    display: -webkit-inline-box;
-    width: 74%;
-    MARGIN-LEFT: 121px;
-}
-h2{
-       font-size: 52px;
-color: #1f1220;
-    font-family: 'Spirax';
-    font-weight: bold;
-    margin-top: 17px;
-    margin-left: 161px;
-    text-transform: capitalize;
+.pricing .box-container .box{
+    flex:1 1 27px;
+    margin:1px;
+    padding:1px;
+    background:#fff;
+    border:.1px solid rgba(0,0,0,.2);
+    box-shadow: 0 .5px 1px rgba(0,0,0,.1);
+    border-radius: .5px;
+    text-align: center;
+    padding-bottom: 3px;
 }
 
-
-
-
-
-
-
-li.dropdown{
-    display: inline-block;
-
+.pricing .box-container .box:nth-child(2),
+.pricing .box-container .box:hover{
+    border:.2rem solid var(--pink);
 }
 
-.dropdown-content{
-    display: none;
-    position: absolute;
-    background-color: beige;
-    min-width: 160px;
-    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-    left: 59%;
-}
-
-.dropdown-content a{
-    color: black;
-    padding: 13px 18px;
-    text-decoration: none;
-    display: block;
-    text-align: left;
-    font-size: 12px;
-}
-
-.dropdown-content a:hover {
-    background-color: #f1f1f1;
-}
-
-.dropdown:hover .dropdown-content {
-    display: block;
-}
-
-
-#wrap{
-          background-color: #0f080ffb;
-          opacity: 0.85;
-    height: 90px;
-    position: fixed;
-    width: 100%;
-    Z-INDEX: 1071;
-          
-}
- .ctn1 {
-        width: 100%;
-        height: 120vh;
-        background-image: url("../assets/imgfleurjaune.jpg");
-        /*-moz-background-inline-policy: ;mettre l'image en couverture*/
-        background-attachment: fixed;
-        background-position-x: right;
-    margin-top: 66%;
-   
-    }
-    .care{
-       font-size: 38px;
-    color: honeydew;
-    position: absolute;
-    top: 240px;
-    left: 25%;
-    font-family: 'Bodini MT';
-    
-    }
-    .reserve{
-        color: honeydew;
-    font-size: 37px;
-    position: absolute;
-    left: 29%;
-    top: 310px;
-    font-family: 'Linotype Didot';
-    font-style: italic;
-    font-weight: 300;
-    }
-    button{
-        position: absolute;
-    top: 425px;
-    left: 38%;
-    border-radius: 8px;
-    width: 20%;
-    font-weight: bold;
-    font-size: 44px;
-    font-family: 'Spirax';
-    color: #1f1220;
-    background: none;
-    border: groove;
-    border-color: #1f1220;
-    }
-
-nav {
-      padding: 8px;
-}
-.logo {
-    width: 231px;
-    margin-top: -300px;
-    margin-left: -17px;
-}
-i.fas.fa-user-circle{
-    width: 25px;
-}
-i.fas.fa-cart-plus{
-    width: 25px;
-}
-.compte a{
-    text-decoration: none;
-     display: inline-block;
-    outline: none;
-    color: floralwhite;
-    text-decoration: none;
-    font-size: 13px;
-    font-family: "Crimson Text";
-    letter-spacing: 1.2px;
-    font-weight: 600;
-    text-transform: uppercase;
-}
-.compte{
-    position: absolute;
-    top: -21px;
-    left: 84%;
-}
-
-nav ul {
-      float: right;
-    margin-top: -247px;
-    margin-right: 90px;
-}
-
-nav ul li {
-      display: inline-block;
-      
-      margin-right: -17px;
-}
-
-nav ul li:not(:first-child) {
-      margin-left: 48px;
-}
-
-nav ul li:last-child {
-      margin-right: 24px;
-}
-.nav-wrapper a.active,.nav-wrapper a:hover{
- background: #7F6E6F;
-    transition: .5s;
-    width: 113%;
-    height: 31px;
-    text-align: -webkit-center;
-    border-radius: 5px;
-    border: groove;
-}
-nav ul li a {
-      display: inline-block;
-    outline: none;
-    color: rgba(255, 255, 255, 0.945);
-    text-decoration: none;
-    font-size: 13px;
-    font-family: "Crimson Text";
-    letter-spacing: 1.2px;
-    font-weight: 600;
-    text-transform: uppercase;
-}
-#nav:checked + .nav-btn {
-      transform: rotate(45deg);
-}
-
-#nav:checked + .nav-btn i {
-      background: #000;
-      transition: transform 0.2s ease;
-}
-
-#nav:checked + .nav-btn i:nth-child(1) {
-      transform: translateY(6px) rotate(180deg);
-}
-
-#nav:checked + .nav-btn i:nth-child(2) {
-      opacity: 0;
-}
-
-#nav:checked + .nav-btn i:nth-child(3) {
-      transform: translateY(-6px) rotate(90deg);
-}
-
-#nav:checked ~ .nav-wrapper {
-      z-index: 9990;
-      opacity: 1;
-}
-
-#nav:checked ~ .nav-wrapper ul li a {
-      opacity: 1;
-      transform: translateX(0);
-}
-
-.hidden {
-      display: none;
-}
-
-}
-
-@media screen and (min-width: 1024px) and (max-width: 1279.99px){
-    
-    
-.lire a{
-    text-decoration: none;
-     font-size: 67px;
-    color: #1f1220;
-    font-family: 'Galada';
-    font-weight: 500;
-    text-transform: capitalize;
-    text-align: -webkit-center;
-    position: relative;
-    left: 37%;
-    top: 223px;
-}
-.ctn2 {
-        width: 100%;
-        height: 95vh;
-        background-image: url("../assets/imgfleur3.jpg");
-        /*-moz-background-inline-policy: ;mettre l'image en couverture*/
-        background-attachment: fixed;
-        background-position-x: right;
-    margin-top: 66%;
-   
-    }
-.prod{
-    position: relative;
-    top: 80px;
-    HEIGHT: 1px;
-}
-.nouv{
-       font-size: 52px;
-       color: #1f1220;
-    font-family: 'Spirax';
-    font-weight: 500;
-    text-transform: capitalize;
-    text-align: -webkit-center;
-    margin-left: 2px;
-}
-.nouvp{
-     font-size: 20px;
-    color: #1f1220b0;
-    font-family: 'Bodini MT';
-    font-weight: 500;
-    text-align: -webkit-center;
-    width: 34%;
-    margin-left: 442px;
-}
-.trait{
-    width: 25%;
-    background-color: #1f1220;
-    height: 1px;
-    margin-left: 145px;
-    margin-top: 28px;
-    position: absolute;
-}
-.trait2{
-        width: 25%;
-    background-color: #1f1220;
-    height: 1px;
-    margin-left: 870px;
-    margin-top: 28px;
-    position: absolute;
-}
-
-
-h4{
-      color: #f1f1f1;
-    font-size: 45px;
-    position: absolute;
-    top: 235%;
-    left: 28%;
-    font-family: 'Spirax';
-}
-.para{
-    color: #f1f1f1;
+.pricing .box-container .box .title{
+    color:var(--purple);
     font-size: 25px;
-    position: absolute;
-    top: 248%;
-    left: 21%;
-    font-family: 'Bodini MT';
-    width: 61%;
-    text-align: -webkit-center;
+    padding-top: 1px;
 }
 
-
-
-.section1{
-    position: relative;
-    background-color: #7F6E6F;
-    top: 894px;
+.pricing .box-container .box .price{
+    font-size: 14px;
+    color:var(--pink);
+    padding:1px 0;
 }
 
-.totalform{
-        width: 862px;
-    height: 371px;
-    left: 18%;
-    top: -82px;
-    z-index: 3;
-    padding: 60px 30px;
-    box-sizing: border-box;
-    background-color: #ffffff;
-    position: relative;
-    box-shadow: 4px 4px 17px rgb(34, 34, 34);
+.pricing .box-container .box .price span{
+    font-size: 16px;
 }
 
-.phairdo{
-  font-size: 21px;
-    color: #1f1220;
-    text-align: -webkit-auto;
-    font-family: 'Bodini MT';
-    display: -webkit-inline-box;
-    width: 74%;
-    MARGIN-LEFT: 121px;
-}
-h2{
-       font-size: 52px;
-color: #1f1220;
-    font-family: 'Spirax';
-    font-weight: bold;
-    margin-top: 17px;
-    margin-left: 161px;
-    text-transform: capitalize;
+.pricing .box-container .box ul{
+    padding:1px 0;
+    list-style: none;
 }
 
-
-
-
-
-
-
-li.dropdown{
-    display: inline-block;
-
+.pricing .box-container .box ul li{
+    font-size: 17px;
+    color:#666;
+    padding:.5px 0;
 }
 
-.dropdown-content{
-    display: none;
-    position: absolute;
-    background-color: beige;
-    min-width: 160px;
-    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-    left: 59%;
+.pricing .box-container .box ul li .fa-check{
+    color:lightgreen;
 }
 
-.dropdown-content a{
-    color: black;
-    padding: 13px 18px;
-    text-decoration: none;
-    display: block;
+.pricing .box-container .box ul li .fa-times{
+    color:tomato;
+}
+
+.contact{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding-bottom: 4px;
+}
+
+.contact .imageF{
+    flex:1 1 40px;
+}
+
+.contact .imageF img{
+    width:100%;
+    padding:2px;
+}
+
+.contact form{
+    flex:1 1 40px;
+    padding:2px 3px;
+    border:.1px solid rgba(0,0,0,.2);
+    box-shadow: 0 .5px 1px rgba(0,0,0,.1);
+    border-radius: .5px;
+    background:#fff;
+}
+
+.contact form .heading{
     text-align: left;
-    font-size: 12px;
+    padding:0;
+    padding-bottom: 2px;
 }
 
-.dropdown-content a:hover {
-    background-color: #f1f1f1;
+.contact form .inputBox{
+    position: relative;
 }
 
-.dropdown:hover .dropdown-content {
-    display: block;
+.contact form .inputBox input, .contact form .inputBox textarea{
+    width:100%;
+    background:none;
+    color:#666;
+    margin:1.5px 0;
+    padding:.5px 0;
+    font-size: 17px;
+    border-bottom: .1px solid rgba(0,0,0,.1);
+    text-transform: none;
 }
 
-
-#wrap{
-          background-color: #0f080ffb;
-          opacity: 0.85;
-    height: 90px;
-    position: fixed;
-    width: 100%;
-    Z-INDEX: 1071;
-          
+.contact form .inputBox textarea{
+    resize: none;
+    height: 13px;
 }
- .ctn1 {
-        width: 100%;
-        height: 120vh;
-        background-image: url("../assets/imgfleurjaune.jpg");
-        /*-moz-background-inline-policy: ;mettre l'image en couverture*/
-        background-attachment: fixed;
-        background-position-x: right;
-    margin-top: 66%;
-   
-    }
-    .care{
-       font-size: 38px;
-    color: honeydew;
+
+.contact form .inputBox label{
     position: absolute;
-    top: 240px;
-    left: 25%;
-    font-family: 'Bodini MT';
+    top:1.7px; left:0;
+    font-size: 1.7px;
+    color:#666;
+    transition: .2s linear;
+}
+
+.contact form .inputBox input:focus ~ label,
+.contact form .inputBox input:valid ~ label,
+.contact form .inputBox textarea:focus ~ label,
+.contact form .inputBox textarea:valid ~ label{
+    top:-.5px;
+    font-size: 1.5px;
+    color:var(--pink);
+}
+
+.footer{
+    padding-top: 3px;
+    background:url("../assets/footer-bg.png") no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.footer .box-container{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.footer .box-container .box{
+    flex:1 1 25px;
+    margin:2px;
+}
+
+.footer .box-container .box h3{
+    font-size: 15px;
+    padding:1px 0;
+    color:#fff;
+    text-decoration: underline;
+    text-underline-offset: 1px;
+}
+
+.footer .box-container .box p{
+    font-size: 15px;
+    padding:.5px 0;
+    color:#eee;
+}
+
+.footer .box-container .box a{
+    display: block;
+    font-size: 15px;
+    padding:.5px 0;
+    color:#eee;
+}
+
+.footer .box-container .box a:hover{
+    text-decoration: underline;
+}
+
+.footer .box-container .box .info{
+    display: flex;
+    align-items: center;
+}
+
+.footer .box-container .box .info i{
+    margin:.5 0;
+    margin-right: 1px;
+    border-radius: 50%;
+    background:#fff;
+    color:var(--pink);
+    font-size: 15px;
+    height:4.5px;
+    width:4.5px;
+    line-height: 4.5px;
+    text-align: center;
+}
+
+.footer .credit{
+    font-size: 10px;
+    font-weight: normal;
+    letter-spacing: .1px;
+    color:#fff;
+    border-top: .1px solid #fff5;
+    padding:2.5px 1px;
+    text-align: center;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* media queries  */
+
+@media (max-width:1200px){
     
-    }
-    .reserve{
-        color: honeydew;
-    font-size: 37px;
-    position: absolute;
-    left: 29%;
-    top: 310px;
-    font-family: 'Linotype Didot';
-    font-style: italic;
-    font-weight: 300;
-    }
-    button{
-        position: absolute;
-    top: 425px;
-    left: 38%;
-    border-radius: 8px;
-    width: 20%;
-    font-weight: bold;
-    font-size: 44px;
-    font-family: 'Spirax';
-    color: #1f1220;
-    background: none;
-    border: groove;
-    border-color: #1f1220;
+    html{
+        font-size: 55%;
     }
 
-nav {
-      padding: 8px;
-}
-.logo {
-    width: 231px;
-    margin-top: -300px;
-    margin-left: -17px;
-}
-i.fas.fa-user-circle{
-    width: 25px;
-}
-i.fas.fa-cart-plus{
-    width: 25px;
-}
-.compte a{
-    text-decoration: none;
-     display: inline-block;
-    outline: none;
-    color: floralwhite;
-    text-decoration: none;
-    font-size: 13px;
-    font-family: "Crimson Text";
-    letter-spacing: 1.2px;
-    font-weight: 600;
-    text-transform: uppercase;
-}
-.compte{
-    position: absolute;
-    top: -21px;
-    left: 84%;
 }
 
-nav ul {
-      float: right;
-    margin-top: -247px;
-    margin-right: 90px;
-}
-
-nav ul li {
-      display: inline-block;
-      
-      margin-right: -17px;
-}
-
-nav ul li:not(:first-child) {
-      margin-left: 48px;
-}
-
-nav ul li:last-child {
-      margin-right: 24px;
-}
-.nav-wrapper a.active,.nav-wrapper a:hover{
- background: #7F6E6F;
-    transition: .5s;
-    width: 113%;
-    height: 31px;
-    text-align: -webkit-center;
-    border-radius: 5px;
-    border: groove;
-}
-nav ul li a {
-      display: inline-block;
-    outline: none;
-    color: rgba(255, 255, 255, 0.945);
-    text-decoration: none;
-    font-size: 13px;
-    font-family: "Crimson Text";
-    letter-spacing: 1.2px;
-    font-weight: 600;
-    text-transform: uppercase;
-}
-#nav:checked + .nav-btn {
-      transform: rotate(45deg);
-}
-
-#nav:checked + .nav-btn i {
-      background: #000;
-      transition: transform 0.2s ease;
-}
-
-#nav:checked + .nav-btn i:nth-child(1) {
-      transform: translateY(6px) rotate(180deg);
-}
-
-#nav:checked + .nav-btn i:nth-child(2) {
-      opacity: 0;
-}
-
-#nav:checked + .nav-btn i:nth-child(3) {
-      transform: translateY(-6px) rotate(90deg);
-}
-
-#nav:checked ~ .nav-wrapper {
-      z-index: 9990;
-      opacity: 1;
-}
-
-#nav:checked ~ .nav-wrapper ul li a {
-      opacity: 1;
-      transform: translateX(0);
-}
-
-.hidden {
-      display: none;
-}
-
-
-}
-
-@media screen and (min-width: 768px) and (max-width: 1023.99px){
-
-      .logo {
-         margin-top: -57px;
-    margin-left: -222px;
-    width: 233px;
-      }
-
-      .nav-wrapper {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            z-index: -1;
-            background: #fff;
-            opacity: 0;
-            transition: all 0.2s ease;
-      }
-      .hidden {
-      display: none;
-}
-
-      .nav-wrapper ul {
-            position: absolute;
-    top: 18%;
-    transform: translateY(-50%);
-    width: 89%;
-      }
-.nav-wrapper ul li {
-            display: block;
-            float: none;
-            width: 100%;
-            text-align: right;
-            margin-bottom: -16px;
-      }
-
-      .nav-wrapper ul li:nth-child(1) a {
-            transition-delay: 0.2s;
-      }
-
-      .nav-wrapper ul li:nth-child(2) a {
-            transition-delay: 0.3s;
-      }
-
-      .nav-wrapper ul li:nth-child(3) a {
-            transition-delay: 0.4s;
-      }
-.nav-wrapper ul li:nth-child(4) a {
-            transition-delay: 0.5s;
-      }
-
-      .nav-wrapper ul li:not(:first-child) {
-            margin-left: 0;
-      }
-
-      .nav-wrapper ul li a {
-            padding: 10px 24px;
-            opacity: 0;
-            color: #000;
-            font-size: 24px;
-            font-weight: 600;
-            letter-spacing: 1.2px;
-            transform: translateX(-20px);
-            transition: all 0.2s ease;
-      }
-
-      .nav-btn {
-            position: fixed;
-            right: 10px;
-            top: 10px;
-            display: block;
-            width: 48px;
-            height: 48px;
-            cursor: pointer;
-            z-index: 9999;
-            border-radius: 50%;
-      }
-
-      .nav-btn i {
-            display: block;
-            width: 20px;
-            height: 2px;
-            background: #fff;
-            border-radius: 2px;
-            margin-left: 14px;
-      }
-
-      .nav-btn i:nth-child(1) {
-            margin-top: 16px;
-      }
-
-      .nav-btn i:nth-child(2) {
-            margin-top: 4px;
-            opacity: 1;
-      }
-
-      .nav-btn i:nth-child(3) {
-            margin-top: 4px;
-      }
-
-
-.lire a{
-    text-decoration: none;
-     font-size: 67px;
-    color: #1f1220;
-    font-family: 'Galada';
-    font-weight: 500;
-    text-transform: capitalize;
-    text-align: -webkit-center;
-    position: relative;
-    left: 37%;
-    top: 223px;
-}
-
-nav ul li:not(:first-child) {
-      margin-left: 48px;
-}
-
-nav ul li:last-child {
-      margin-right: 24px;
-}
-.nav-wrapper a.active,.nav-wrapper a:hover{
- background: #7F6E6F;
-    transition: .5s;
-    width: 113%;
-    height: 31px;
-    text-align: -webkit-center;
-    border-radius: 5px;
-    border: groove;
-}
-nav ul li a {
-      display: inline-block;
-    outline: none;
-    color: rgba(255, 255, 255, 0.945);
-    text-decoration: none;
-    font-size: 13px;
-    font-family: "Crimson Text";
-    letter-spacing: 1.2px;
-    font-weight: 600;
-    text-transform: uppercase;
-}
-#nav:checked + .nav-btn {
-      transform: rotate(45deg);
-}
-
-#nav:checked + .nav-btn i {
-      background: #000;
-      transition: transform 0.2s ease;
-}
-
-#nav:checked + .nav-btn i:nth-child(1) {
-      transform: translateY(6px) rotate(180deg);
-}
-
-#nav:checked + .nav-btn i:nth-child(2) {
-      opacity: 0;
-}
-
-#nav:checked + .nav-btn i:nth-child(3) {
-      transform: translateY(-6px) rotate(90deg);
-}
-
-#nav:checked ~ .nav-wrapper {
-      z-index: 9990;
-      opacity: 1;
-}
-
-#nav:checked ~ .nav-wrapper ul li a {
-      opacity: 1;
-      transform: translateX(0);
-}
-
-
-
-.ctn2 {
-        width: 100%;
-        height: 95vh;
-        background-image: url("../assets/imgfleur3.jpg");
-        /*-moz-background-inline-policy: ;mettre l'image en couverture*/
-        background-attachment: fixed;
-        background-position-x: right;
-    margin-top: 66%;
-   
-    }
-.prod{
-    position: relative;
-    top: 80px;
-    HEIGHT: 1px;
-}
-.nouv{
-       font-size: 52px;
-       color: #1f1220;
-    font-family: 'Spirax';
-    font-weight: 500;
-    text-transform: capitalize;
-    text-align: -webkit-center;
-    margin-left: 2px;
-}
-.nouvp{
-     font-size: 20px;
-    color: #1f1220b0;
-    font-family: 'Bodini MT';
-    font-weight: 500;
-    text-align: -webkit-center;
-    width: 34%;
-    margin-left: 442px;
-}
-.trait{
-    width: 25%;
-    background-color: #1f1220;
-    height: 1px;
-    margin-left: 145px;
-    margin-top: 28px;
-    position: absolute;
-}
-.trait2{
-        width: 25%;
-    background-color: #1f1220;
-    height: 1px;
-    margin-left: 870px;
-    margin-top: 28px;
-    position: absolute;
-}
-
-
-h4{
-     color: #f1f1f1;
-    font-size: 50px;
-    position: absolute;
-    top: 189%;
-    left: 45%;
-    display: table;
-    font-family: 'Spirax';
-
-}
-.para{
-        color: #f1f1f1;
-    font-size: 25px;
-    position: absolute;
-    top: 200%;
-    left: 55%;
-    font-family: 'Bodini MT';
-    width: 73%;
-    text-align: -webkit-center;
-}
-
-
-
-.section1{
-        position: relative;
-    background-color: #7F6E6F;
-    top: 894px;
-    width: 176%;
-    z-index: 3;
-}
-
-.totalform{
-        width: 862px;
-    height: 371px;
-    left: 18%;
-    top: -82px;
-    z-index: 3;
-    padding: 60px 30px;
-    box-sizing: border-box;
-    background-color: #ffffff;
-    position: relative;
-    box-shadow: 4px 4px 17px rgb(34, 34, 34);
-}
-
-.phairdo{
-  font-size: 25px;
-    color: #1f1220;
-    text-align: -webkit-auto;
-    font-family: 'Bodini MT';
-    display: -webkit-inline-box;
-    width: 74%;
-    MARGIN-LEFT: 121px;
-}
-h2{
-       font-size: 56px;
-color: #1f1220;
-    font-family: 'Spirax';
-    font-weight: bold;
-    margin-top: 17px;
-    margin-left: 161px;
-    text-transform: capitalize;
-}
-
-
-
-
-
-
-
-li.dropdown{
-    display: inline-block;
-
-}
-
-.dropdown-content{
-    display: none;
-    position: absolute;
-    background-color: beige;
-    min-width: 160px;
-    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-    left: 59%;
-}
-
-.dropdown-content a{
-    color: black;
-    padding: 13px 18px;
-    text-decoration: none;
-    display: block;
-    text-align: left;
-    font-size: 12px;
-}
-
-.dropdown-content a:hover {
-    background-color: #f1f1f1;
-}
-
-.dropdown:hover .dropdown-content {
-    display: block;
-}
-
-
-#wrap{
-    background-color: #0f080ffb;
-    opacity: 0.85;
-    height: 90px;
-    position: fixed;
-    width: 100%;
-    Z-INDEX: 1071;
-          
-}
- .ctn1 {
-        width: 176%;
-        height: 120vh;
-        background-image: url("../assets/imgfleurjaune.jpg");
-        /*-moz-background-inline-policy: ;mettre l'image en couverture*/
-        background-attachment: fixed;
-        background-position-x: right;
-    margin-top: 66%;
-   
-    }
-    .care{
-       font-size: 38px;
-    color: honeydew;
-    position: absolute;
-    top: 240px;
-    left: 25%;
-    font-family: 'Bodini MT';
+@media (max-width:991px){
     
+    section{
+        padding:0 3%;
+        padding-top: 7.5px;
+        padding-bottom: 2px;
     }
-    .reserve{
-        color: honeydew;
-    font-size: 37px;
-    position: absolute;
-    left: 29%;
-    top: 310px;
-    font-family: 'Linotype Didot';
-    font-style: italic;
-    font-weight: 300;
+
+}
+
+@media (max-width:768px){
+
+    header label{
+        visibility: visible;
+        opacity: 1;
     }
-    button{
-    position: absolute;
-    top: 593px;
-    left: 73%;
-    border-radius: 6px;
-    width: 34%;
-    font-weight: bold;
-    font-size: 49px;
-    font-family: 'Spirax';
-    color: #fdfcfd;
-    z-index: 3;
-    background: none;
-    border: groove;
-    border-color: blanchedalmond;
-    }
-.logo {
-    width: 231px;
-}
-i.fas.fa-user-circle{
-    width: 41px;
-}
-i.fas.fa-cart-plus{
-    width: 41px;
-}
-.compte a{
-    text-decoration: none;
-     display: inline-block;
-    outline: none;
-    color: floralwhite;
-    text-decoration: none;
-    font-size: 26px;
-    font-family: "Crimson Text";
-    letter-spacing: 1.2px;
-    font-weight: 600;
-    text-transform: uppercase;
-}
-.compte{
+
+    header .navbar{
         position: absolute;
-    top: 4px;
-    left: 73%;
-}
-
-
-
-}
-
-@media screen and (min-width: 480px) and (max-width: 767.99px){
-
-
-      .nav-wrapper {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            z-index: -1;
-            background: #fff;
-            opacity: 0;
-            transition: all 0.2s ease;
-      }
-      .hidden {
-      display: none;
-}
-
-      .nav-wrapper ul {
-            position: absolute;
-    top: 18%;
-    transform: translateY(-50%);
-    width: 89%;
-      }
-.nav-wrapper ul li {
-            display: block;
-            float: none;
-            width: 100%;
-            text-align: right;
-            margin-bottom: -16px;
-      }
-
-      .nav-wrapper ul li:nth-child(1) a {
-            transition-delay: 0.2s;
-      }
-
-      .nav-wrapper ul li:nth-child(2) a {
-            transition-delay: 0.3s;
-      }
-
-      .nav-wrapper ul li:nth-child(3) a {
-            transition-delay: 0.4s;
-      }
-.nav-wrapper ul li:nth-child(4) a {
-            transition-delay: 0.5s;
-      }
-
-      .nav-wrapper ul li:not(:first-child) {
-            margin-left: 0;
-      }
-
-      .nav-wrapper ul li a {
-            padding: 10px 24px;
-            opacity: 0;
-            color: #000;
-            font-size: 24px;
-            font-weight: 600;
-            letter-spacing: 1.2px;
-            transform: translateX(-20px);
-            transition: all 0.2s ease;
-      }
-
-      .nav-btn {
-            position: fixed;
-            right: 10px;
-            top: 10px;
-            display: block;
-            width: 48px;
-            height: 48px;
-            cursor: pointer;
-            z-index: 9999;
-            border-radius: 50%;
-      }
-
-      .nav-btn i {
-            display: block;
-            width: 20px;
-            height: 2px;
-            background: #fff;
-            border-radius: 2px;
-            margin-left: 14px;
-      }
-
-      .nav-btn i:nth-child(1) {
-            margin-top: 16px;
-      }
-
-      .nav-btn i:nth-child(2) {
-            margin-top: 4px;
-            opacity: 1;
-      }
-
-      .nav-btn i:nth-child(3) {
-            margin-top: 4px;
-      }
-
-
-.lire a{
-    text-decoration: none;
-     font-size: 67px;
-    color: #1f1220;
-    font-family: 'Galada';
-    font-weight: 500;
-    text-transform: capitalize;
-    text-align: -webkit-center;
-    position: relative;
-    left: 37%;
-    top: 223px;
-}
-
-nav ul li:not(:first-child) {
-      margin-left: 48px;
-}
-
-nav ul li:last-child {
-      margin-right: 24px;
-}
-.nav-wrapper a.active,.nav-wrapper a:hover{
- background: #7F6E6F;
-    transition: .5s;
-    width: 113%;
-    height: 31px;
-    text-align: -webkit-center;
-    border-radius: 5px;
-    border: groove;
-}
-nav ul li a {
-      display: inline-block;
-    outline: none;
-    color: rgba(255, 255, 255, 0.945);
-    text-decoration: none;
-    font-size: 13px;
-    font-family: "Crimson Text";
-    letter-spacing: 1.2px;
-    font-weight: 600;
-    text-transform: uppercase;
-}
-#nav:checked + .nav-btn {
-      transform: rotate(45deg);
-}
-
-#nav:checked + .nav-btn i {
-      background: #000;
-      transition: transform 0.2s ease;
-}
-
-#nav:checked + .nav-btn i:nth-child(1) {
-      transform: translateY(6px) rotate(180deg);
-}
-
-#nav:checked + .nav-btn i:nth-child(2) {
-      opacity: 0;
-}
-
-#nav:checked + .nav-btn i:nth-child(3) {
-      transform: translateY(-6px) rotate(90deg);
-}
-
-#nav:checked ~ .nav-wrapper {
-      z-index: 9990;
-      opacity: 1;
-}
-
-#nav:checked ~ .nav-wrapper ul li a {
-      opacity: 1;
-      transform: translateX(0);
-}
-
-
-
-.ctn2 {
-        width: 281vw;
-        height: 95vh;
-        background-image: url("../assets/imgfleur3.jpg");
-        /*-moz-background-inline-policy: ;mettre l'image en couverture*/
-        background-attachment: fixed;
-        background-position-x: right;
-    margin-top: 66%;
-   
+        top:100%; left: 0;
+        width:100%;
+        background:#fff;
+        padding:59px 2px;
+        border-top: .1px solid rgba(0,0,0,.2);
+        box-shadow: 0 .5px 1px rgba(0,0,0,.1);
+        transform-origin: top;
+        transform: scaleY(0);
+        opacity: 0;
+        transition: .2s linear;
     }
-.prod{
-        position: relative;
-    top: 15px;
-    HEIGHT: 481px;
-}
-.nouv{
-     font-size: 76px;
-    color: #1f1220;
-    font-family: 'Spirax';
-    font-weight: 900;
-    text-transform: capitalize;
-    text-align: -webkit-center;
-    margin-left: 508px;
-}
-.nouvp{
-         font-size: 33px;
-    color: #1f1220b0;
-    font-family: 'Bodini MT';
-    font-weight: 500;
-    text-align: -webkit-center;
-    width: 124%;
-    margin-left: 420px;
-}
-.trait{
-    width: 36%;
-    background-color: #1f1220;
-    height: 2px;
-   margin-left: 304px;
-    margin-top: 46px;
-    position: absolute;
-}
-.trait2{
-    width: 36%;
-    background-color: #1f1220;
-    height: 2px;
-    margin-left: 959px;
-    margin-top: 46px;
-    position: absolute;
-}
 
-
-h4{
-     color: #f1f1f1;
-    font-size: 50px;
-    position: absolute;
-    top: 263%;
-    left: 83%;
-    width: 132%;
-    display: table;
-    font-family: 'Spirax';
-
-}
-.para{
-        color: #f1f1f1;
-    font-size: 25px;
-    position: absolute;
-    top: 259%;
-    display: none;
-    left: 55%;
-    font-family: 'Bodini MT';
-    width: 73%;
-    text-align: -webkit-center;
-}
-
-
-
-.section1{
-        position: relative;
-    background-color: #7F6E6F;
-    top: 1244px;
-    width: 281vw;
-    z-index: 3;
-}
-
-.totalform{
-        width: 862px;
-    height: 371px;
-    left: 18%;
-    top: -82px;
-    z-index: 3;
-    padding: 60px 30px;
-    box-sizing: border-box;
-    background-color: #ffffff;
-    position: relative;
-    box-shadow: 4px 4px 17px rgb(34, 34, 34);
-}
-
-.phairdo{
-  font-size: 25px;
-    color: #1f1220;
-    text-align: -webkit-auto;
-    font-family: 'Bodini MT';
-    display: -webkit-inline-box;
-    width: 74%;
-    MARGIN-LEFT: 121px;
-    display: none;
-}
-h2{
-       font-size: 67px;
-    color: #1f1220;
-    font-family: 'Spirax';
-    font-weight: bold;
-    margin-top: 76px;
-    margin-left: 88px;
-    text-transform: capitalize;
-}
-
-
-
-
-
-
-
-li.dropdown{
-    display: inline-block;
-
-}
-
-.dropdown-content{
-    display: none;
-    position: absolute;
-    background-color: beige;
-    min-width: 160px;
-    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-    left: 59%;
-}
-
-.dropdown-content a{
-    color: black;
-    padding: 13px 18px;
-    text-decoration: none;
-    display: block;
-    text-align: left;
-    font-size: 12px;
-}
-
-.dropdown-content a:hover {
-    background-color: #f1f1f1;
-}
-
-.dropdown:hover .dropdown-content {
-    display: block;
-}
-
-
-#wrap{
-    background-color: #0f080ffb;
-    opacity: 0.85;
-    height: 90px;
-    position: fixed;
-    width: 100%;
-    Z-INDEX: 1071;
-          
-}
- .ctn1 {
-        width: 281vw;
-        height: 120vh;
-        background-image: url("../assets/imgfleurjaune.jpg");
-        /*-moz-background-inline-policy: ;mettre l'image en couverture*/
-        background-attachment: fixed;
-        background-position-x: right;
-    margin-top: 194%;
-   
+    header .navbar a{
+        display: block;
+        margin:2px 0;
+        font-size: 12px;
     }
-    .care{
-       font-size: 38px;
-    color: honeydew;
-    position: absolute;
-    top: 240px;
-    left: 25%;
-    font-family: 'Bodini MT';
+
+    header input:checked ~ .navbar{
+        transform: scaleY(1);
+        opacity: 1;
+    }
+
+    header input:checked ~ label::before{
+        content:'\f00d';
+    }
+
+    .home{
+        flex-flow: column-reverse;
+    }
+
+    .home .imageF img{
+        width:100%;
+    }
+
+    .home .contentF h3{
+        font-size: 26px;
+    }
+
+    .home .contentF p{
+        font-size: 15px;
+    }
+
+    .about{
+        background-position: right;
+    }
+
+    .newsletter p{
+        width:auto;
+    }
+
+}
+
+@media (max-width:450px){
     
+    html{
+        font-size: 50%;
     }
-    .reserve{
-        color: honeydew;
-    font-size: 37px;
-    position: absolute;
-    left: 29%;
-    top: 310px;
-    font-family: 'Linotype Didot';
-    font-style: italic;
-    font-weight: 300;
+
+    .about .column .contentF .buttonsF a{
+        width:100%;
+        text-align: center;
     }
-    button{
-    position: absolute;
-    top: 593px;
-    left: 73%;
-    border-radius: 6px;
-    width: 34%;
-    font-weight: bold;
-    font-size: 49px;
-    font-family: 'Spirax';
-    color: #fdfcfd;
-    z-index: 3;
-    background: none;
-    border: groove;
-    border-color: blanchedalmond;
+
+    .about .column .contentF .buttonsF a:last-child{
+        margin: 1px 0;
     }
-.logo {
-    width: 220px;
-    margin-top: -54px;
-    margin-left: 125px;
-}
-i.fas.fa-user-circle{
-    width: 41px;
-}
-i.fas.fa-cart-plus{
-    width: 41px;
-}
-.compte a{
-    text-decoration: none;
-     display: inline-block;
-    outline: none;
-    color: floralwhite;
-    text-decoration: none;
-    font-size: 26px;
-    font-family: "Crimson Text";
-    letter-spacing: 1.2px;
-    font-weight: 200;
-    text-transform: uppercase;
-}
-.compte{
-        position: absolute;
-    top: 4px;
-    left: 73%;
-}
 
 }
 </style>

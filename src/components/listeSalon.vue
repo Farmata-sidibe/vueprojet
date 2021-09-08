@@ -39,7 +39,7 @@ export default {
   components: {
       search
   },
-  props: ["salons"],
+  props: ["salons", "benj"],
 
   
 };
@@ -97,7 +97,7 @@ font-size: 16px;
     background-color: #efe3f0;
    box-shadow: 1px 1px 9px rgb(34, 34, 34);
     position: relative;
-    top: -84px;
+    top: 40px;
     left: 110px;
     margin-top: 38px;
 

@@ -1,7 +1,6 @@
 <template>
 <div>
-    <div id="wrap">
-  <div class="container">
+  <div class="Navbar">
             <nav>
                   <input type="checkbox" id="nav" class="hidden">
                   <label for="nav" class="nav-btn">
@@ -9,46 +8,32 @@
                         <i></i>
                         <i></i>
                   </label>
-                  <div >
-                        <a href="#" class="alogo"><img src="../assets/logo-haira.png" alt="" class="logo" ></a>
+                  <div class="im" >
+                        <a href="#" class="alogo"><img src="../assets/TAILOR.png" alt="" class="logo" ></a>
                   </div>
                   <div class="nav-wrapper">
                         <ul>
                               <li><a href="/">Accueil</a></li>
-                              <li><a href="/">Produit</a></li>
-                              <li><a href="/blog">Blog</a></li>
-                              <li class="dropdown">
-                                  <a href="/">Catégorie</a>
-                              <div class="dropdown-content">
-                                  <a href="/">Homme</a>
-                                  <a href="/">Femme</a>
-                                  <a href="/">Enfant</a>
-
-                              </div>
-                              </li>
-                              <li><a href="/Produit"><i class="fas fa-cart-plus"></i>Marque</a></li>
+                              <li><a href="http://localhost:8080/blog">Blog</a></li>
+                              <li><a href="/panier">Panier</a></li>
+                              <li><a href="/navproduit"><i class="fas fa-cart-plus"></i>Boutique</a></li>
+                              <li><a href="/login"><i class="fas fa-user-circle"></i>Compte</a></li>
                         </ul>
                   </div>
-                   <div class="compte">
-                            <a href="/login"><i class="fas fa-user-circle"></i>Compte</a>
-                        </div>
+                  
             </nav>
-      </div>
-
-  </div>
-
+</div>
 <div class="header">
-    <img src="../assets/image-back-produit.jpg" alt="" class="imgpro">
+    <img src="../assets/zQaGxRSYck.jpg" alt="" class="imgpro">
     <div class="imall">
     <img src="../assets/image-produit-1.jpg" alt="" class="img1 im">
-    <img src="../assets/image-produit-2.jpg" alt="" class="img2 im">
     <img src="../assets/image-produit-3.jpg" alt="" class="img3 im">
+    <img src="../assets/image-produit-2.jpg" alt="" class="img2 im">
+    
     </div>
 </div>
 
-<div class="cherche">
-<input type="search" class="inputcher" placeholder="créme, shampoing, masque,...">
-</div>
+
 <div>
 <Produit/>
 </div>
@@ -59,18 +44,72 @@
 </template>
 
 <script>
-
 import Produit from '../views/Produit.vue'
-
-
-
 export default {
-    name: "navproduit",
-    components: {
-        Produit,
-        
-    }
-}
+  name: "navproduit",
+  components: {
+    Produit
+  },
+  props: ["produits"],
+  
+  data() {
+    return {
+      Panier: [],
+    };
+  },
+  created() {
+    console.log(this.produits);
+    this.getLocalStorage();
+  },
+  methods: {
+    ajouter: function(id, nom, prix, image) {
+      alert(` le produit ${nom}`);
+      this.Panier = this.Panier || [];
+      localStorage.removeItem("panier");
+
+      if (this.Panier.length === 0) {
+        let quantite = 1;
+        this.Panier.push({
+          produitId: id,
+          nom: nom,
+          quantite: quantite,
+          prix_unitaire: prix,
+          soustotal: quantite * prix,
+          image: image,
+        });
+      } else {
+        let alreadyProduit = false;
+        this.Panier.forEach((item) => {
+          if (item.produitId === id) {
+            item.quantite++;
+            item.soustotal = item.quantite * prix;
+            alreadyProduit = true;
+          }
+        });
+        if (alreadyProduit === false) {
+          let quantite = 1;
+          this.Panier.push({
+            produitId: id,
+            nom: nom,
+            quantite: quantite,
+            prix_unitaire: prix,
+            soustotal: quantite * prix,
+            image: image,
+          });
+        }
+      }
+      localStorage.setItem("panier", JSON.stringify(this.Panier));
+    },
+
+    getLocalStorage() {
+      let getlocalSt = localStorage.getItem("panier");
+      if (getlocalSt != null || getlocalSt !== undefined) {
+        this.Panier = JSON.parse(getlocalSt);
+        console.log(this.Panier);
+      }
+    },
+  },
+}; 
 </script>
 
 
@@ -100,56 +139,23 @@ export default {
 .im{
     width: 300px;
 }
-li.dropdown{
-    display: inline-block;
 
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 190px;
+    background-color: #ffffff;
+    box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.2);
+    padding: 0px 5%;
 }
-
-.dropdown-content{
-    display: none;
-    position: absolute;
-    background-color: beige;
-    min-width: 160px;
-    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-    left: 59%;
-}
-
-.dropdown-content a{
-    color: black;
-    padding: 13px 18px;
-    text-decoration: none;
-    display: block;
-    text-align: left;
-    font-size: 12px;
-}
-
-.dropdown-content a:hover {
-    background-color: #f1f1f1;
-}
-
-.dropdown:hover .dropdown-content {
-    display: block;
-}
-
-
-#wrap{
-          background-color: #0f080ffb;
-          opacity: 0.85;
-    height: 90px;
-    position: fixed;
-    width: 100%;
-    Z-INDEX: 1071;
-          
-}
-
-
 nav {
       padding: 8px;
 }
 .logo {
-    width: 231px;
-    margin-top: -300px;
-    margin-left: -17px;
+   width: 178px;
+   margin-left: 67px;
 }
 i.fas.fa-user-circle{
     width: 25px;
@@ -161,23 +167,18 @@ i.fas.fa-cart-plus{
     text-decoration: none;
      display: inline-block;
     outline: none;
-    color: floralwhite;
+    font-family: myriad pro regular;
+    color: #5b4461;
+    font-size: 20px;
+    font-weight: 700;
     text-decoration: none;
-    font-size: 13px;
-    font-family: "Crimson Text";
-    letter-spacing: 1.2px;
-    font-weight: 600;
-    text-transform: uppercase;
 }
-.compte{
-    position: absolute;
-    top: -21px;
-    left: 84%;
-}
+
+
 nav ul {
-      float: right;
-    margin-top: -247px;
-    margin-right: 90px;
+    display: flex;
+    position: absolute;
+    left: 28%;
 }
 
 nav ul li {
@@ -205,13 +206,11 @@ nav ul li:last-child {
 nav ul li a {
       display: inline-block;
     outline: none;
-    color: rgba(255, 255, 255, 0.945);
     text-decoration: none;
-    font-size: 13px;
-    font-family: "Crimson Text";
-    letter-spacing: 1.2px;
-    font-weight: 600;
-    text-transform: uppercase;
+    font-family: myriad pro regular;
+    color: #5b4461;
+    font-size: 20px;
+    font-weight: 700;
 }
 #nav:checked + .nav-btn {
       transform: rotate(45deg);
@@ -247,6 +246,7 @@ nav ul li a {
 .hidden {
       display: none;
 }
+/**FIN NAVBAR */
 
 
     
@@ -254,13 +254,33 @@ nav ul li a {
 
 @media screen and (min-width: 768px) and (max-width: 1023.99px){
 
-      .logo {
-         margin-top: -57px;
-    margin-left: -222px;
-    width: 233px;
-      }
+     /**NAVBAR */
 
-      .nav-wrapper {
+.logo {
+   width: 178px;
+   padding-left: 60px;
+}
+i.fas.fa-user-circle{
+    width: 25px;
+}
+i.fas.fa-cart-plus{
+    width: 25px;
+}
+.compte a{
+    text-decoration: none;
+     display: inline-block;
+    outline: none;
+    font-family: myriad pro regular;
+    color: #5b4461;
+    font-size: 20px;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+
+
+/**Menu burger */
+.nav-wrapper {
             position: fixed;
             top: 0;
             left: 0;
@@ -335,7 +355,7 @@ nav ul li a {
             display: block;
             width: 20px;
             height: 2px;
-            background: #fff;
+            background: rgb(66, 55, 68);
             border-radius: 2px;
             margin-left: 14px;
       }
@@ -410,78 +430,9 @@ nav ul li a {
       opacity: 1;
       transform: translateX(0);
 }
+/**FIN menu burger */
 
-
-
-
-li.dropdown{
-    display: inline-block;
-
-}
-
-.dropdown-content{
-    display: none;
-    position: absolute;
-    background-color: beige;
-    min-width: 160px;
-    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-    left: 59%;
-}
-
-.dropdown-content a{
-    color: black;
-    padding: 13px 18px;
-    text-decoration: none;
-    display: block;
-    text-align: left;
-    font-size: 12px;
-}
-
-.dropdown-content a:hover {
-    background-color: #f1f1f1;
-}
-
-.dropdown:hover .dropdown-content {
-    display: block;
-}
-
-
-#wrap{
-    background-color: #0f080ffb;
-    opacity: 0.85;
-    height: 90px;
-    position: fixed;
-    width: 100%;
-    Z-INDEX: 1071;
-          
-}
- 
-.logo {
-    width: 231px;
-}
-i.fas.fa-user-circle{
-    width: 41px;
-}
-i.fas.fa-cart-plus{
-    width: 41px;
-}
-.compte a{
-    text-decoration: none;
-     display: inline-block;
-    outline: none;
-    color: floralwhite;
-    text-decoration: none;
-    font-size: 26px;
-    font-family: "Crimson Text";
-    letter-spacing: 1.2px;
-    font-weight: 600;
-    text-transform: uppercase;
-}
-.compte{
-        position: absolute;
-    top: 4px;
-    left: 73%;
-}
+/**FIN NAVBAR */
 
 }
 </style>

@@ -23,7 +23,7 @@ export default {
   },
   created() {
     this.axios
-      .get("http://localhost:3000/client/getById/:id" + this.id)
+      .get("http://localhost:3000/client/profile/" + this.id)
       .then((res) => {
         console.log(res);
         this.clients = res.data.clients;

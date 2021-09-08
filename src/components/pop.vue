@@ -22,8 +22,8 @@
     </div>
 
     </div>
-    <a href="/registerCoiffeur"><b-button class="mt-3 dis" block @click="$bvModal.hide('bv-modal-example')">Ajouter</b-button></a>
-    <a href="/registerClient"><b-button class="mt-3 dos" block @click="$bvModal.hide('bv-modal-example')">S'inscrire</b-button></a>
+    <a href="/registerCoiffeur"><button class="mt-3 dis" block @click="$bvModal.hide('bv-modal-example')">Ajouter</button></a>
+    <a href="/registerClient"><button class="mt-3 dos" block @click="$bvModal.hide('bv-modal-example')">S'inscrire</button></a>
   </b-modal>
 </div>
   </div>
@@ -39,19 +39,18 @@ export default {
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
-<style>
+<style >
 
 @media screen and (min-width: 1280px) {
   .pe{
-  font-size: 27px;
+  font-size: 23px;
   font-family: 'Bodini MT';
-  font-style: italic;
   font-weight: bold;
   color:  #1d101dfb;
   display: table-caption;
     width: 197%;
     position: absolute;
-    margin-left: -90px;
+    margin-left: -76px;
 }
 .on{
   position: absolute;
@@ -62,12 +61,13 @@ export default {
     left: 67%;
 }
 .modal-content {
-    height: 114vh;
+    height: 90vh;
     position: relative;
     display: flex;
     flex-direction: column;
-   width: 226% !important;
-    left: -65%;
+   width: 150% !important;
+        left: -33%;
+    top: -65px;
     pointer-events: auto;
     background-color: #fff;
     background-clip: padding-box;
@@ -76,16 +76,16 @@ export default {
     outline: 0;
 }
 .modal-title {
-    margin-bottom: 0;
-    line-height: 1.5;
-    font-size: 48px;
+   margin-bottom: -22px !important;
+    line-height: 0.5 !important;
+    font-size: 30px;
     font-family: 'Spirax';
     font-weight: bold;
     color: #1d101dfb;
     margin-left: 247px;
 }
 .he{
-  font-size: 34px;
+  font-size: 24px;
   font-family: 'Bodini MT';
   font-weight: bold;
   text-decoration-line: underline;
@@ -105,11 +105,13 @@ export default {
   position: absolute;
     left: 60%;
     cursor: pointer;
-    width: 254px;
-    font-size: 36px;
-    margin-left: 58px;
-    top: 244px;
+   width: 152px;
+    font-size: 26px;
+    margin-left: 8px;
+    top: 270px;
     background-color:  #1f111ffb !important;
+    color: white;
+    border-radius: 5px;
     box-shadow: 1px 2px 27px #1d101dfb;
     font-family: 'Bodini MT';
   font-weight: 400;
@@ -118,11 +120,14 @@ export default {
 .dis{
   position: absolute;
     cursor: pointer;
-    width: 254px;
-    font-size: 36px;
+    width: 152px;
+    font-size: 26px;
     margin-left: 58px;
-    top: 244px;
+    top: 270px;
     background-color:  #1f111ffb !important;
+    color: white;
+    border-radius: 5px;
+
     box-shadow: 1px 2px 27px #1d101dfb;
     font-family: 'Bodini MT';
   font-weight: 400;
@@ -142,8 +147,8 @@ export default {
     width: 135px !important;
     font-weight: bold !important;
     position: absolute !important;
-    top: 364px !important;
-    left: 702px !important;
+    top: 140px !important;
+    left: 65px !important;
     border-color: #1f1220 !important;
     box-shadow: 0px 2px 9px 3px #2b1e2c !important;
     border-left-style: groove !important;
