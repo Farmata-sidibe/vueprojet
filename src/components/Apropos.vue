@@ -117,7 +117,7 @@
 
 <section class="about" id="about">
 
-    <h1 class="heading"> about the app </h1>
+    <h1 class="heading"> About The App </h1>
 
     <div class="column">
 
@@ -126,9 +126,15 @@
         </div>
 
         <div class="contentF">
-            <h3>Easy And Perfect Solution For Your Business App</h3>
-            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nulla placeat deserunt saepe repudiandae veniam soluta minima dolor hic aperiam iure.</p>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium, quaerat. Dolorem ratione saepe magni quo inventore porro ab voluptates eos, nam eius provident accusantium, quia similique est, repellendus et reiciendis.</p>
+            <h3>Facilitez vos prise de RDV</h3>
+            <p>Menus : Blog - Boutique - Barbier - Salon de coiffure  </p>
+            <p>Qu’il est bon de se faire beauté, de s’accorder un moment rien que pour soi… 
+                Coiffeur et barbier, le salon de coiffure reçoit les hommes et 
+                les femmes, les enfants, pour une coupe de cheveux, 
+                pour l’entretien de la barbe ou de la moustache. 
+                Que vous souhaitiez arborer des cheveux longs ou courts, 
+                le coiffeur et son équipe réalisent la coupe parfaite....</p>
+                
             <div class="buttonsF">
                 <a href="#" class="btn"> <i class="fab fa-apple"></i> app store </a>
                 <a href="#" class="btn"> <i class="fab fa-google-play"></i> google-play </a>
@@ -223,73 +229,7 @@
 
 </div>
 
-<!-- review section starts  -->
 
-<section class="review" id="review">
-
-    <h1 class="heading"> people's review </h1>
-
-    <div class="box-container">
-
-        <div class="box">
-            <i class="fas fa-quote-right"></i>
-            <div class="userF">
-                <img src="../assets/pic1.png" alt="">
-                <h3>john deo</h3>
-                <div class="stars">
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                </div>
-                <div class="comment">
-                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Possimus et, perspiciatis nisi tempore aspernatur accusantium sed distinctio facilis aperiam laborum autem earum repellat, commodi eum. Ullam cupiditate expedita officiis obcaecati?
-                </div>
-            </div>
-        </div>
-
-        <div class="box">
-            <i class="fas fa-quote-right"></i>
-            <div class="userF">
-                <img src="../assets/pic2.png" alt="">
-                <h3>john deo</h3>
-                <div class="stars">
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star-half-alt"></i>
-                </div>
-                <div class="comment">
-                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Possimus et, perspiciatis nisi tempore aspernatur accusantium sed distinctio facilis aperiam laborum autem earum repellat, commodi eum. Ullam cupiditate expedita officiis obcaecati?
-                </div>
-            </div>
-        </div>
-
-        <div class="box">
-            <i class="fas fa-quote-right"></i>
-            <div class="userF">
-                <img src="../assets/pic3.png" alt="">
-                <h3>john deo</h3>
-                <div class="stars">
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="far fa-star"></i>
-                </div>
-                <div class="comment">
-                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Possimus et, perspiciatis nisi tempore aspernatur accusantium sed distinctio facilis aperiam laborum autem earum repellat, commodi eum. Ullam cupiditate expedita officiis obcaecati?
-                </div>
-            </div>
-        </div>
-
-    </div>
-
-</section>
-
-<!-- review section ends -->
 
 <!-- pricing section starts  -->
 
@@ -341,51 +281,13 @@
 
 <!-- pricing section ends -->
 
-<!-- contact section starts  -->
 
-<section class="contact" id="contact">
-
-    <div class="imageF">
-        <img src="../assets/contact-img.png" alt="">
-    </div>
-
-    <form action="">
-
-        <h1 class="heading">contact us</h1>
-
-        <div class="inputBox">
-            <input type="text" required>
-            <label>name</label>
-        </div>
-
-        <div class="inputBox">
-            <input type="email" required>
-            <label>email</label>
-        </div>
-
-        <div class="inputBox">
-            <input type="number" required>
-            <label>phone</label>
-        </div>
-
-        <div class="inputBox">
-            <textarea required name="" id="" cols="30" rows="10"></textarea>
-            <label>message</label>
-        </div>
-
-        <input type="submit" class="btn" value="send message">
-
-    </form>
-
-</section>
-
-<!-- contact section edns -->
 
 <!-- footer section starts  -->
 
 
 <div class="sectionCinq">
-    <h2>Nous trouver</h2>
+    <h1 class="heading"> Nous Trouver</h1>
     <div class="paralax">
        <form class="formplan">
        <div class="text-plan">
@@ -477,9 +379,11 @@ section{
     color:#ee82ee;
     -webkit-background-clip: text;
     background-clip: text;
-    font-size: 40px;
-    text-transform: uppercase;
+    font-family: 'Parchment';
+    font-weight: 600;
+    font-size: 70px;
     padding:25px;
+    
 }
 
 header{
@@ -594,7 +498,7 @@ header label{
     transition: 0.3s ease-in-out;
 }
 .containerF .cardF:hover{
-    height: 420px;
+    height: 297px;
 }
 .containerF .cardF .imgBx{
     position: relative;
@@ -626,11 +530,11 @@ border-radius: 4px;
     transition-delay: 0.3s;
 }
 .contentFF h2{
-    font-family: 'Spirax';
+    font-family: 'Galada';
     font-size: 20px;
 }
 .contentFF p{
-    font-family: 'Spirax';
+    font-family: bodini MT;
     font-size: 14px;
 }
 
@@ -788,57 +692,8 @@ border-radius: 4px;
     color:var(--pink);
 }
 
-.review .box-container{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-wrap: wrap;
-}
 
-.review .box-container .box{
-    background:rgb(255, 255, 255);
-    margin:1px;
-    padding:1px;
-    text-align: center;
-    position: relative;
-    border:.1px solid rgba(0,0,0,.2);
-    box-shadow: 0 .5px 1px rgba(0,0,0,.1);
-    flex:1 1 30px;
-    border-radius: .5px;
-}
 
-.review .box-container .box .fa-quote-right{
-    position: absolute;
-    top:1px; right:2px;
-    font-size: 57px;
-    color:var(--pink);
-    opacity: .3;
-}
-
-.review .box-container .box .userF img{
-    border-radius: 50%;
-    object-fit: cover;
-    height: 151px;
-    width:151px;
-    margin-top: 2px;
-}
-
-.review .box-container .box .userF h3{
-    color:var(--pink);
-    font-size: 20px;
-}
-
-.review .box-container .box .userF .stars i{
-    color:var(--purple);
-    font-size: 25px;
-    padding:1px 0;
-}
-
-.review .box-container .box .comment{
-    color:#666;
-    font-size: 14px;
-    padding:1px;
-}
 
 .pricing .box-container{
     display: flex;
@@ -861,7 +716,7 @@ border-radius: 4px;
 
 .pricing .box-container .box:nth-child(2),
 .pricing .box-container .box:hover{
-    border:.2rem solid var(--pink);
+    border:.2rem solid #ee82ee;
 }
 
 .pricing .box-container .box .title{
@@ -899,74 +754,7 @@ border-radius: 4px;
     color:tomato;
 }
 
-.contact{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-wrap: wrap;
-    padding-bottom: 4px;
-}
 
-.contact .imageF{
-    flex:1 1 40px;
-}
-
-.contact .imageF img{
-    width:100%;
-    padding:2px;
-}
-
-.contact form{
-    flex:1 1 40px;
-    padding:2px 3px;
-    border:.1px solid rgba(0,0,0,.2);
-    box-shadow: 0 .5px 1px rgba(0,0,0,.1);
-    border-radius: .5px;
-    background:#fff;
-}
-
-.contact form .heading{
-    text-align: left;
-    padding:0;
-    padding-bottom: 2px;
-}
-
-.contact form .inputBox{
-    position: relative;
-}
-
-.contact form .inputBox input, .contact form .inputBox textarea{
-    width:100%;
-    background:none;
-    color:#666;
-    margin:1.5px 0;
-    padding:.5px 0;
-    font-size: 17px;
-    border-bottom: .1px solid rgba(0,0,0,.1);
-    text-transform: none;
-}
-
-.contact form .inputBox textarea{
-    resize: none;
-    height: 13px;
-}
-
-.contact form .inputBox label{
-    position: absolute;
-    top:1.7px; left:0;
-    font-size: 1.7px;
-    color:#666;
-    transition: .2s linear;
-}
-
-.contact form .inputBox input:focus ~ label,
-.contact form .inputBox input:valid ~ label,
-.contact form .inputBox textarea:focus ~ label,
-.contact form .inputBox textarea:valid ~ label{
-    top:-.5px;
-    font-size: 1.5px;
-    color:var(--pink);
-}
 
 .footer{
     padding-top: 3px;
@@ -1039,14 +827,7 @@ border-radius: 4px;
 }
 
 /**SECTION CINQ */
-.sectionCinq h2{
-    text-align: center;
-    font-family: 'Parchment';
-    font-weight: 600;
-    font-size: 66px;
-    color: rgb(31, 16, 31);
-    line-height: 3;
-}
+
 .paralax{
     width: 100%;
     height: 98vh;
