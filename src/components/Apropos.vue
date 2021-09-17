@@ -13,9 +13,10 @@
         <a href="#home">home</a>
         <a href="#features">Services</a>
         <a href="#pricing">Prestation</a>
-        <a href="http://localhost:8080/blog">Blog</a>
+        <a href="/blog">Blog</a>
         <a href="/navproduit">Boutique</a>
         <a href="/login">Compte</a>
+        <a v-on:click="logout" href="/login">Déconnexion</a>
     </nav>
 
 </header>
@@ -312,6 +313,12 @@ export default {
     name: "Apropos",
     components: {
         myFooter
+    },
+    methods: {
+        logout() {
+            localStorage.clear();
+            this.$router.push({name: "login"})
+        }
     }
 }
 </script>
