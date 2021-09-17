@@ -9,22 +9,21 @@ import Vueaxios from "vue-axios";
 import { BootstrapVue, IconsPlugin } from "bootstrap-vue";
 import 'bootstrap/dist/css/bootstrap.css'
 import 'bootstrap-vue/dist/bootstrap-vue.css'
-import cardSlide from 'vue-card-slide'
+
 
 Vue.prototype.$apiurl = "https://api.hairs-style.fr/";
 
 
-import { Datetime } from 'vue-datetime';
-
-Vue.component('datetime', Datetime);
 
 
 
-import VueCarousel from 'vue-carousel';
-Vue.use(VueCarousel);
 
 
-Vue.use(cardSlide)
+
+
+
+
+
 
 
 
