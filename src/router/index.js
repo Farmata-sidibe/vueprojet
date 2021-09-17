@@ -1,42 +1,40 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 
-import myNavAccueil from '../components/myNavAccueil.vue'
-import newpage from '../components/newpage.vue'
 
 import login from '../components/login.vue'
-import Accueil from '../components/Accueil.vue'
+
 
 import registerClient from '../components/registerClient.vue'
-import registerCoiffeur from '../components/registerCoiffeur.vue'
-import profilCoiffeur from '../components/profilCoiffeur.vue'
 
 
-import registerSalon from '../components/registerSalon.vue'
-import pageRecherche from '../components/pageRecherche.vue'
+
+
+
+
 import myFooter from '../components/myFooter.vue'
 import myProfil from '../views/myProfil.vue'
 import blogBarbe from '../components/blogBarbe.vue'
-import calendrier from '../components/calendrier.vue'
+
 
 /*import myProduit from '../components/myProduit.vue'*/
 
 import DTproduit from '../components/DTproduit.vue'
 
-import Salon from '../views/Salon.vue'
+
 import myBlog from '../views/myBlog.vue'
 
 import Produit from '../views/Produit.vue'
 import navproduit from '../components/navproduit.vue'
-import RDV from '../components/RDV.vue'
+
 import Apropos from '../components/Apropos.vue'
 
 
 
-import exemple from '../components/exemple.vue'
+
 
 import blog from '../components/blog.vue'
-import reservationfin from '../components/reservationfin.vue'
+
 
 import pop from '../components/pop.vue'
 import mpo from '../components/mpo.vue'
@@ -62,15 +60,15 @@ import navconnecteCoiffeur from '../components/navconnecteCoiffeur.vue'
 
 import navbar from '../components/navbar.vue'
 import prestation from '../components/prestation.vue'
-import presta from '../components/presta.vue'
 
-import search from '../components/search.vue'
+
+
 import artSoinTresse from '../components/artSoinTresse.vue'
 import artSoinCrepus from '../components/artSoinCrepus.vue'
 
 import updatepassword from '../components/updatepassword.vue'
 import msgvalide from '../components/msgvalide.vue'
-import validemail from '../components/validemail.vue'
+
 
 
 
@@ -84,51 +82,23 @@ import validemail from '../components/validemail.vue'
 
 Vue.use(VueRouter)
 
-const routes = [{
-        path: '/Accueil',
-        name: 'Accueil',
-        component: Accueil
-    },
-    {
-        path: '/myNavAccueil',
-        name: 'myNavAccueil',
-        component: myNavAccueil
-    },
+const routes = [
+
     {
         path: '/navbar',
         name: 'navbar',
         component: navbar
     },
-    {
-        path: '/Accueil',
-        name: 'Accueil',
-        component: Accueil
-    },
-    {
-        path: '/RDV',
-        name: 'RDV',
-        component: RDV
-    },
+
+
     {
         path: '/',
         name: 'Apropos',
         component: Apropos
     },
-    {
-        path: '/profilCoiffeur',
-        name: 'profilCoiffeur',
-        component: profilCoiffeur
-    },
-    {
-        path: '/reservationfin',
-        name: 'reservationfin',
-        component: reservationfin
-    },
-    {
-        path: '/calendrier',
-        name: 'calendrier',
-        component: calendrier
-    },
+
+
+
     {
         path: '/artSoinTresse',
         name: 'artSoinTresse',
@@ -154,11 +124,7 @@ const routes = [{
         name: 'pousseBtrouBarbearbe',
         component: trouBarbe
     },
-    {
-        path: '/exemple',
-        name: 'exemple',
-        component: exemple
-    },
+
     {
         path: '/mpo',
         name: 'mpo',
@@ -175,15 +141,12 @@ const routes = [{
         component: msgvalide
     },
     {
-        path: '/validemail',
+        path: '/validemai/:email',
         name: 'validemail',
-        component: validemail
+        component: () =>
+            import ("../components/validemail.vue"),
     },
-    {
-        path: '/newpage',
-        name: 'newpage',
-        component: newpage
-    },
+
     {
         path: '/Produit',
         name: 'Produit',
@@ -217,11 +180,7 @@ const routes = [{
         name: 'prestation',
         component: prestation
     },
-    {
-        path: '/presta',
-        name: 'presta',
-        component: presta
-    },
+
     {
         path: '/blog',
         name: 'blog',
@@ -272,11 +231,7 @@ const routes = [{
         name: 'adminhome',
         component: adminhome
     },
-    {
-        path: '/search',
-        name: 'search',
-        component: search
-    },
+
     {
         path: '/myProfil',
         name: 'myProfil',
@@ -307,31 +262,14 @@ const routes = [{
         name: 'registerClient',
         component: registerClient
     },
-    {
-        path: '/registerCoiffeur',
-        name: 'registerCoiffeur',
-        component: registerCoiffeur
-    },
+
     {
         path: '/pop',
         name: 'pop',
         component: pop
     },
-    {
-        path: '/registerSalon',
-        name: 'registerSalon',
-        component: registerSalon
-    },
-    {
-        path: '/pageRecherche',
-        name: 'pageRecherche',
-        component: pageRecherche
-    },
-    {
-        path: '/Salon',
-        name: 'Salon',
-        component: Salon
-    },
+
+
 
 ]
 

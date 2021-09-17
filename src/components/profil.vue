@@ -90,7 +90,7 @@ data() {
      update: function() {
       this.axios
         .put(
-          "http://localhost:3000/client/update/" + this.client.id,
+          `${this.$apiurl}client/update/` + this.client.id,
           this.client
         )
         .then((res) => {

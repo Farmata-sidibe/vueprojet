@@ -23,7 +23,7 @@ export default {
   },
   created() {
     this.axios
-      .get("http://localhost:3000/produit/getById" + this.id)
+      .get(`${this.$apiurl}produit/getById` + this.id)
       .then((res) => {
         console.log(res);
         this.produits = res.data.produits;

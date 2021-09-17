@@ -38,7 +38,7 @@ export default {
     components:{},
     methods:{
         doupdate: function (){
-            this.axios.post("http://localhost:3000/client/updatepassword",{
+            this.axios.post(`${this.$apiurl}client/updatepassword`,{
                 password:this.password
             })
             .then(res =>{

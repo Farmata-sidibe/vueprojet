@@ -6,7 +6,6 @@
         <form class="fo">
         <input type="email" 
         name="email" 
-        id="email" 
         v-model="email"  
         placeholder=" |saisissez votre email">
         <button @click="validemail" value="test"> Je Valide</button>
@@ -29,7 +28,7 @@ export default {
    components:{},
     methods:{
         validemail: function (){
-            this.axios.post("http://localhost:3000/client/validemail",{
+            this.axios.post(`${this.$apiurl}client/validemail`,{
                 email:this.email,
             })
             .then(res =>{

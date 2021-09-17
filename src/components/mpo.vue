@@ -36,7 +36,7 @@ export default {
     components:{},
     methods:{
         dompo: function (){
-            this.axios.post("http://localhost:3000/client/forgetpassword",{
+            this.axios.post(`${this.$apiurl}client/forgetpassword`,{
                 email:this.email,
             })
             .then(res =>{

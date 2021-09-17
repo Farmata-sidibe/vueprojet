@@ -116,7 +116,7 @@ export default {
         quantite.push(item.quantite);
       });
       this.axios
-        .post("http://localhost:3000/commande/new", {
+        .post(`${this.$apiurl}commande/new`, {
           clientId: client.id,
           panier: this.panier,
           produitId: produitId,
