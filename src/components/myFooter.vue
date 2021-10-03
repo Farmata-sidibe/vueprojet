@@ -60,37 +60,13 @@ export default {
     overflow: hidden;
 }
 .footer{
-    background-color: #0f080ffb;
+    background-color: #000000fb;
     height: 200px;
     position: relative;
 
 }
 
-.footerimg{
-    width: 100%;
-    position: relative;
-    BOTTOM: -126px;
-}
 
-button.bton{
-    border: none;
-    border-radius: 9px;
-    background-color: #1f1220d0;
-    outline: none;
-    height: 82px;
-    width: 213px;
-    position: relative;
-    left: 64%;
-    bottom: 218px;
-    border-color: #fff;
-    border-left-style: groove;
-    border-right-style: groove;
-    border-top-style: groove;
-    border-bottom-style: groove;
-    border-width: 2px;
-   
-    
-}
 .now{
    font-weight: bold;
     text-decoration: none;
@@ -191,7 +167,7 @@ ul li:nth-child(4) a:before {
     overflow: hidden;
 }
 .footer{
-    background-color: #0f080ffb;
+    background-color: #000000fb;
     height: 200px;
     position: relative;
 
@@ -322,11 +298,11 @@ ul li:nth-child(4) a:before {
     
 }
 .footer{
-    background-color: #0f080ffb;
+    background-color: #000000fb;
     height: 200px;
     position: relative;
     overflow: hidden;
-    width: 129%;
+    width: 100%;
 }
 
 .footerimg{
@@ -454,11 +430,11 @@ ul li:nth-child(4) a:before {
     
 }
 .footer{
-    background-color: #0f080ffb;
+    background-color: #000000fb;
     height: 200px;
     position: relative;
     overflow: hidden;
-    width: 129%;
+    width: 100%;
 
 }
 
@@ -587,11 +563,11 @@ ul li:nth-child(4) a:before {
     
 }
 .footer{
-    background-color: #0f080ffb;
+    background-color: #000000fb;
     height: 200px;
     position: relative;
     overflow: hidden;
-    width: 129%;
+    width: 100%;
 
 }
 

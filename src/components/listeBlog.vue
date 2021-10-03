@@ -46,10 +46,10 @@ export default {
 }
 
 .article11{
-    position: relative;
-    left: 8%;
+    flex-wrap: wrap;
+    flex-basis: auto;
     display: table-caption;
-    top: 65px;
+   
 }
 
 .arc{

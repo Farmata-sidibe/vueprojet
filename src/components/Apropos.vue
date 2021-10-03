@@ -10,13 +10,13 @@
     <label for="menu-bar" class="fas fa-bars"></label>
 
     <nav class="navbar">
-        <a href="#home">home</a>
+        <a href="#home">Accueil</a>
         <a href="#features">Services</a>
-        <a href="#pricing">Prestation</a>
+        <a href="http://127.0.0.1/hairstylewordpress/">Réservation</a>
         <a href="/blog">Blog</a>
         <a href="/navproduit">Boutique</a>
         <a href="/login">Compte</a>
-        <a v-on:click="logout" href="/login">Déconnexion</a>
+        <a href="/panier">Panier</a>
     </nav>
 
 </header>
@@ -123,7 +123,7 @@
     <div class="column">
 
         <div class="imageF">
-            <img src="../assets/about-img.png" alt="">
+            <img src="../assets/smartmockups_ktw1zznq.png" alt="">
         </div>
 
         <div class="contentF">
@@ -293,10 +293,10 @@
        <form class="formplan">
        <div class="text-plan">
            <h4>Heure d'ouverture</h4>
-           <p>Lun-Ven: 09H00 - 20H00 \ Samedi: 10H00 - 21H00 \ Dimanche: 08H30 - 15H</p>
+           <p>Lun-Ven: 09H00 - 20H00 \ Samedi: 10H00 - 21H00 <br> \ Dimanche: 08H30 - 15H</p>
            <h4>Adresse</h4>
-           <p>16, Rue du château, 75001 Paris, France</p>
-           <p>hairs-style.fr \ Tel: 0664405692</p>
+           <p>16, Rue du château, 75001 Paris, France </p>
+           <p>\ Tel: +33802000001 hairs-style.fr</p>
        </div>
        </form>
     </div>
@@ -429,7 +429,7 @@ header input{
 }
 
 header label{
-    font-size: 10px;
+    font-size: 30px;
     color:var(--purple);
     cursor: pointer;
     visibility: hidden;
@@ -763,84 +763,16 @@ border-radius: 4px;
 
 
 
-.footer{
-    padding-top: 3px;
-    background:url("../assets/footer-bg.png") no-repeat;
-    background-size: cover;
-    background-position: center;
-}
 
-.footer .box-container{
-    display: flex;
-    flex-wrap: wrap;
-}
-
-.footer .box-container .box{
-    flex:1 1 25px;
-    margin:2px;
-}
-
-.footer .box-container .box h3{
-    font-size: 15px;
-    padding:1px 0;
-    color:#fff;
-    text-decoration: underline;
-    text-underline-offset: 1px;
-}
-
-.footer .box-container .box p{
-    font-size: 15px;
-    padding:.5px 0;
-    color:#eee;
-}
-
-.footer .box-container .box a{
-    display: block;
-    font-size: 15px;
-    padding:.5px 0;
-    color:#eee;
-}
-
-.footer .box-container .box a:hover{
-    text-decoration: underline;
-}
-
-.footer .box-container .box .info{
-    display: flex;
-    align-items: center;
-}
-
-.footer .box-container .box .info i{
-    margin:.5 0;
-    margin-right: 1px;
-    border-radius: 50%;
-    background:#fff;
-    color:var(--pink);
-    font-size: 15px;
-    height:4.5px;
-    width:4.5px;
-    line-height: 4.5px;
-    text-align: center;
-}
-
-.footer .credit{
-    font-size: 10px;
-    font-weight: normal;
-    letter-spacing: .1px;
-    color:#fff;
-    border-top: .1px solid #fff5;
-    padding:2.5px 1px;
-    text-align: center;
-}
 
 /**SECTION CINQ */
 
 .paralax{
     width: 100%;
-    height: 98vh;
+    height: 100vh;
     background-size: cover;
     background-repeat: no-repeat;
-    background-image: url("../assets/ClEQGczq4O.jpg");
+    background-image: url("../assets/afoAdobe.jpg");
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -848,12 +780,19 @@ border-radius: 4px;
     background-attachment: fixed; 
 }
 .formplan{
-   width: 448px;
-    height: 510px;
-    background: rgba(7, 7, 7, 0.76);
-    border-radius: 5px;
-    box-shadow: 6px 7px 17px rgb(27, 26, 26);
+      display: flex;
+      margin-top: -98px;
+    justify-content: center;
+    flex-wrap: wrap;
+    flex-basis: 29em;
+    margin:1px;
+   
+    background:rgb(7, 7, 7, 0.76);
+    border:.1px solid rgba(0,0,0,.2);
     border-radius: 8px;
+    box-shadow: 6px 7px 17px rgb(27, 26, 26);
+    text-align: center;
+    padding: 0px 8px 15px 8px;
 }
 .text-plan{
     
@@ -949,7 +888,7 @@ border-radius: 4px;
     }
 
     .home{
-        flex-flow: column-reverse;
+       flex-flow: wrap-reverse;
     }
 
     .home .imageF img{
@@ -977,7 +916,7 @@ border-radius: 4px;
 
 }
 
-@media (max-width:450px){
+@media (max-width:480px){
     
     html{
         font-size: 50%;

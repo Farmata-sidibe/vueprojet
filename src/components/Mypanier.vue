@@ -12,7 +12,7 @@
           <th>Prix</th>
           <th>Soustotal</th>
           <th></th>
-          <th>Total</th>
+          
         </tr>
       </thead>
       <tbody>
@@ -40,7 +40,7 @@
         </tr>
         <tr>
           
-          <td colspan="6"></td>
+          <td colspan="7"></td>
           <td class="total">{{ total }}</td>
           <td colspan="2"></td>
         </tr>
@@ -173,7 +173,6 @@ export default {
 }
 .tou{
   width: 100%;
-  height: 200vh;
   display: flex;
     flex-direction: column;
     justify-content: center;

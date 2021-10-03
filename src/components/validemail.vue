@@ -2,7 +2,7 @@
 
     <div class="ctn">
         <a href="/" class="retour"> <button class="btnretour"> Back</button></a>
-        <h1>Entrez votre adresse email</h1>
+        <h1>Veuillez valider votre adresse email</h1>
         <form class="fo">
         <input type="email" 
         name="email" 
@@ -18,36 +18,27 @@
 
 <script>
 export default {
-    data(){
-        return {
-            email: this.$route.params.email,
-        };
+  name: "validemail",
+  components: {},
+  data() {
+    return {
+      email: this.$route.params.email,
+    };
+  },
+  methods: {
+    validemail: function () {
+      this.axios
+        .post(`${this.$apiurl}client/validemail`, {
+          email: this.email,
+        })
+        .then((result) => {
+          alert(result);
+        })
+        .catch((err) => {
+          alert(err);
+        });
     },
-    name: "validemail",
-    //add method
-   components:{},
-    methods:{
-        validemail: function (){
-            this.axios.post(`${this.$apiurl}client/validemail`,{
-                email:this.email,
-            })
-            .then(res =>{
-                if(res.data.token){
-                    localStorage.setItem("token",res.data.token)
-/* une fois les donnes recperer et stockés il va nous renvoyer sur home */
-                    this.$router.push({name: 'login'})
-                    window.location.reload();
-                }
-                else{
-                    this.$router.push({name: "login", params: {msg: "non connecté"} })
-                }
-            })
-            .catch(err => {
-                console.log(err);
-            })
-
-        },
-    },
+  },
 };
 </script>
 
@@ -80,7 +71,7 @@ h1{
     font-family: 'Bodini MT';
     position: absolute;
     top: 195px;
-    left: 8%;
+    left: 5%;
     Z-INDEX: 1;
     text-decoration: underline;
     font-weight: bold;

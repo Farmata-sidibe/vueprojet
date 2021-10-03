@@ -13,41 +13,49 @@
 <div class="sectionBlog">
 
 <div class="article11">
-  <a href="/artSoinCrepus"><img src="../assets/article-soin-afro.jpg" alt="" class="imgarc"></a>
+    <router-link to="/artSoinCrepus">
+  <img src="../assets/article-soin-afro.jpg" alt="" class="imgarc">
     <div class="group">
     <p class="arc">articles, Coiffure</p>
-  <a href="/artSoinCrepus">  <h4 class="arcT">Cheveux crépus: nos astuces <br> pour  une bonne  routine <br> à adopter</h4> </a>
+    <h4 class="arcT">Cheveux crépus: nos astuces <br> pour  une bonne  routine <br> à adopter</h4>
     </div>
+    </router-link>
 </div>
 
 <div class="article2">
-   <a href="#"> <img src="../assets/article-lissage.jpg" alt="" class="imgarc"> </a> 
+    <router-link to="#">
+  <img src="../assets/article-lissage.jpg" alt="" class="imgarc">
     <div class="group">
     <p class="arc">articles, Coiffure</p>
-   <a href="#"> <h4 class="arcT">Coupe pour cheveux fins: <br>Découvrez nos astuces</h4> </a>
+  <h4 class="arcT">Coupe pour cheveux fins: <br>Découvrez nos astuces</h4>
     </div>
+    </router-link>
 </div>
 
 <div class="article3">
-   <a href="/artSoinTresse"><img src="../assets/article-tresse.jpg" alt="" class="imgarc"></a>
+    <router-link to="/artSoinTresse">
+   <img src="../assets/article-tresse.jpg" alt="" class="imgarc">
     <div class="group">
     <p class="arc">articles, Coiffure</p>
-   <a href="/artSoinTresse"> <h4 class="arcT">Comment entretenir les <br> tresses afro: homme et femme </h4> </a>
+   <h4 class="arcT">Comment entretenir les <br> tresses afro: homme et femme </h4>
+   </div>
+   </router-link>
     </div>
-</div>
+    
+
 
 <div class="article4">
-  <a href="#">  <img src="../assets/article-casse-cheveux.jpg" alt="" class="imgarc"> </a>
+    <router-link to="#">
+ <img src="../assets/article-casse-cheveux.jpg" alt="" class="imgarc">
     <div class="group">
     <p class="arc">articles, Coiffure</p>
-   <a href="#"> <h4 class="arcT">Lutter contre la <br>casse des cheveux: Découvrez <br>notre secret</h4> </a>
+  <h4 class="arcT">Lutter contre la <br>casse des cheveux: Découvrez <br>notre secret</h4>
     </div>
+     </router-link>
 </div>
 
 
 </div>
-
-
 
 
 <footerBlog/>

@@ -1,6 +1,6 @@
 <template>
 <div>
-    <div class="containerdash" v-for="client in clients" :key="client.id">
+    <div class="containerdash">
         <form class="formdash">
          <h1 class="profil">Profil</h1>
         </form>
@@ -13,33 +13,6 @@
         <p class="tele">{{ client.tel }}</p>
         <form class="rondUser">
               
-              
-    <div class="row" v-if="message !== null">
-      <div class="col-12 text-lg-center">
-        {{ message }}
-      </div>
-    </div>
-    <div class="row">
-      <div class="col-md-3">
-        <div>
-          <img
-            v-if="client.image !== undefined"
-            :src="client.image"
-            class="avatar img-fluid"
-            alt="avatar"
-          />
-          <img v-else :src="pic" 
-          class="avatar img-fluid" alt="" />
-          <input class="ty" type="file" accept="image/jpeg" @change="uploadImage" />
-        </div>
-      </div>
-
-    
-    </div>
- 
-            
-           
-
         </form>
         
         </form>
@@ -62,51 +35,33 @@
 </template>
 
 <script>
-import VueJwtDecode from "vue-jwt-decode";
+import jwt from "vue-jwt-decode"
 import navconnecter from '../components/navconnecter.vue'
 export default {
     name: 'profil',
-  props: ["clients"],
-    
+
 data() {
     return {
      client: {},
-      message: null,
+     id: this.$route.params.id
     };
   },
   components:{
         navconnecter
     },
 
-  created: function () {
-    if (localStorage.getItem("token") === null) {
-      this.$router.push({ name: "myProfil/:id" });
-    } else {
-      this.client = VueJwtDecode.decode(localStorage.getItem("token"));
-      console.log(this.client);
-    }
+  created: function() {
+    this.axios
+      .get(`${this.$apiurl}client/profil/` + this.client.id,)
+      .then((res) => {
+        console.log(res);
+        this.client = jwt.decode(localStorage.getItem("token"));
+      })
+      .catch((err) => {
+        alert(err);
+      });
   },
-  methods: {
-     update: function() {
-      this.axios
-        .put(
-          `${this.$apiurl}client/update/` + this.client.id,
-          this.client
-        )
-        .then((res) => {
-          if (res.status === 200) {
-            localStorage.setItem("token", JSON.stringify(res.data.token));
-            this.message = "votre profil est a jour";
-          } else {
-            this.message = "error: votre profil n'est pas mis a jour";
-          }
-        })
-        .catch((err) => {
-          console.log(err);
-        });
-    },
-
-  },
+  
 };
 </script>
 
@@ -228,7 +183,7 @@ p.tele{
 
 .profil{
     font-size: 42px;
-    color: #fff;
+    color: rgb(252, 250, 250);
     text-align: center;
     font-family: 'Bodini MT';
     position: relative;

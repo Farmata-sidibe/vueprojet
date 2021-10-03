@@ -11,8 +11,8 @@
   <ul>
 <li><a href="#"><i class="fas fa-qrcode"></i>Profil</a></li>
 <li><a href="#"><i class="fas fa-calendar-week"></i>Mes Rendez-Vous</a></li>
-<li><a href="#"><i class="far fa-question-circle"></i>Prendre RDV</a></li>
-<li><a href="#"><i class="fas fa-cart-plus"></i>Boutique</a></li>
+<li><a href="/hairstylewordpress"><i class="far fa-question-circle"></i>Prendre RDV</a></li>
+<li><a href="/navproduit"><i class="fas fa-cart-plus"></i>Boutique</a></li>
 
 </ul>
 </div>

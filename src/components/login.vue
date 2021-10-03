@@ -1,8 +1,10 @@
 <template>
 <div class="plan">
- <img src="../assets/KM8cBT3lsJ.jpg" alt="" class="plan ig">
+ <!--<img src="../assets/KM8cBT3lsJ.jpg" alt="" class="plan ig">-->
      <div class="container">
-      <a href="/" class="retour"> <button class="btnretour"> Back</button></a>
+         <router-link to="/">
+       <button class="btnretour"> Back </button>
+       </router-link>
             <div >
                 
                 <form @submit.prevent="dologin" class="forme">
@@ -15,12 +17,14 @@
                     <i class="fas fa-lock password"></i>
                     <input type="password" name="password" id="password" v-model="password"  placeholder=" |votre mot de passe">
                     <a href="/mpo" class="forget">Mot de passe oublié? Cliquez-ici</a>
-                    <a href="/login"><button class="inscrit">S'identifier</button></a>
+                    <button type="submit" class="inscrit">S'identifier</button>
                    
                 </form>
                 <form class="formimage">
                    <p class="inscription">Pas encore membre? Inscrivez vous maintenent</p>
-                   <span> <pop/> </span>
+                   <router-link to="/registerClient">
+                   <button class="show-btn">S'inscrire</button>
+                   </router-link>
                 </form>
             </div>
 
@@ -30,21 +34,18 @@
     </div>
 </template>
 <script>
-import pop from '../components/pop.vue'
+
 
 export default {
-    name: "registerClient",
+    name: "login",
     data() {
         return {
             email: "",
             password: "",
-            emaillogin: "",
-            passwordlogin: "",
+            
         }
     },
-    components:{
-      pop
-    },
+   
     methods:{
         dologin: function (){
             this.axios.post(`${this.$apiurl}client/llogin`,{
@@ -54,7 +55,7 @@ export default {
             .then(res =>{
                 if(res.data.token){
                     localStorage.setItem("token",res.data.token)
-/* une fois les donnes recperer et stockés il va nous renvoyer sur home */
+/* une fois les donnes recperer et stockés il va nous renvoyer sur dashboard */
                     this.$router.push({name: 'myProfil'})
                     window.location.reload();
                 }
@@ -67,18 +68,26 @@ export default {
             })
 
         },
+        
     },
+    
     
     
 }
 </script>
 <style scoped>
-.ig {
+.plan {
+    background-image: url("../assets/KM8cBT3lsJ.jpg");
+    background-attachment: fixed;
   background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
     width: 100%;
     height: 120vh;
+    flex-wrap: wrap;
+    justify-content: center;
+    flex: 1 1 27px;
+    
 }
 .forget{
   font-size: 13px;
@@ -90,23 +99,43 @@ export default {
     left: 12%;
     font-weight: 900;
 }
-.retour{
-    color: rgb(63, 55, 66);
+
+.btnretour{
+    color: rgb(197, 187, 202) !important;
     font-size: 30px;
     font-weight: bold;
     font-family: 'Galada';
-    position: absolute;
-    top: 31px;
-    left: 56px;
-}
-.btnretour{
    border-radius: 7px;
     background: transparent;
     outline: none;
     height: 58px;
     width: 141px;
-    box-shadow: 2px 2px 0px 0px #3b2f3b !important;
+    box-shadow: 2px 2px 0px 0px #ce9ace !important;
     border-width: 2px;
+    margin-left: 21px;
+    margin-top: 28px;
+}
+.show-btn {
+  border: none !important;
+    border-radius: 15px !important;
+    background-color: #1f1220 !important;
+    color: white !important;
+   font-size: 22px !important;
+    outline: none !important;
+    height: 47px !important;
+    padding: 0;
+    width: 135px !important;
+    font-weight: bold !important;
+   margin: 77px 0px 0px 34px;
+    border-color: #1f1220 !important;
+    box-shadow: 0px 2px 9px 3px #2b1e2c !important;
+    border-left-style: groove !important;
+    border-right-style: groove !important;
+    border-top-style: groove !important;
+    border-bottom-style: groove !important;
+    border-width: 2px !important;
+    font-family: 'Spirax' !important;
+    text-transform: initial !important;
 }
 h2{
   font-size: 40px;
@@ -121,7 +150,7 @@ h5{
   color: #f1edf5;
   font-family: 'Bodini MT';
   font-weight: 100;
-  margin-top: -31px;
+  margin-top: 1px;
 }
 
 .mail{
@@ -171,9 +200,7 @@ h5{
     height: 58px;
     width: 163px;
     font-weight: bold;
-    position: absolute;
-    top: 371px;
-    left: 565px;
+   margin: 235px 0 0 62px;
    border-color: #1f1220 !important;
     box-shadow: 0px 2px 9px 3px #2b1e2c !important;
     border-left-style: groove;
@@ -234,6 +261,8 @@ input#password{
     position: absolute;
     left: 43%;
     bottom: 35px;
+    flex-basis: auto;
+    flex-wrap: wrap;
     
 }
 .formimage{
@@ -248,13 +277,10 @@ input#password{
     left: 13%;
     bottom: 170px;
     box-shadow: 4px 8px 18px 3px rgb(134, 133, 133);
+    flex-basis: auto;
+    flex-wrap: wrap;
 }
-a{
-    position: absolute;
-    left: -137%;
-    top: -26px;
-    
-}
+
 
 
 </style>

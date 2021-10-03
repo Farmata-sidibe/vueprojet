@@ -53,8 +53,6 @@ export default {
         return {
             email: "",
             password: "",
-            emaillogin: "",
-            passwordlogin: "",
             nom: "",
             prenom: "",
             adresse: "",
@@ -67,7 +65,7 @@ export default {
     components:{},
     methods:{
         doregister: function (){
-            this.axios.post(`${this.$apiurl}client/registor`,{
+           this.axios.post("http://localhost:3000/client/registor",{
                 email:this.email,
                 password:this.password,
                 nom:this.nom,
@@ -83,11 +81,11 @@ export default {
                 if(res.data.token){
                     localStorage.setItem("token",res.data.token)
 /* une fois les donnes recperer et stockés il va nous renvoyer sur home */
-                    this.$router.push({name: 'msgvalide'})
+                    this.$router.push({name: 'validemail'})
                     window.location.reload();
                 }
                 else{
-                    this.$router.push({name: "msgvalide", params: {msg: "non connecté"} })
+                    this.$router.push({name: "validemail", params: {msg: "non connecté"} })
                 }
             })
             .catch(err => {

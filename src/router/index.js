@@ -1,16 +1,9 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 
-
 import login from '../components/login.vue'
 
-
 import registerClient from '../components/registerClient.vue'
-
-
-
-
-
 
 import myFooter from '../components/myFooter.vue'
 import myProfil from '../views/myProfil.vue'
@@ -21,7 +14,6 @@ import blogBarbe from '../components/blogBarbe.vue'
 
 import DTproduit from '../components/DTproduit.vue'
 
-
 import myBlog from '../views/myBlog.vue'
 
 import Produit from '../views/Produit.vue'
@@ -29,12 +21,7 @@ import navproduit from '../components/navproduit.vue'
 
 import Apropos from '../components/Apropos.vue'
 
-
-
-
-
 import blog from '../components/blog.vue'
-
 
 import pop from '../components/pop.vue'
 import mpo from '../components/mpo.vue'
@@ -67,7 +54,8 @@ import artSoinTresse from '../components/artSoinTresse.vue'
 import artSoinCrepus from '../components/artSoinCrepus.vue'
 
 import updatepassword from '../components/updatepassword.vue'
-import msgvalide from '../components/msgvalide.vue'
+
+import validemail from '../components/validemail.vue'
 
 
 
@@ -135,16 +123,12 @@ const routes = [
         name: 'updatepassword',
         component: updatepassword
     },
+
     {
-        path: '/msgvalide',
-        name: 'msgvalide',
-        component: msgvalide
-    },
-    {
-        path: '/validemai/:email',
+        path: '/validemail',
         name: 'validemail',
-        component: () =>
-            import ("../components/validemail.vue"),
+        component: validemail
+
     },
 
     {

@@ -1,188 +1,169 @@
 <template>
-  <div class="text-center bg-color">
-    <h1>Login</h1>
-    <div class="login-form">
-      <form id="login-form" @submit.prevent="dologin">
-        <div class="login-form-main-message"></div>
-        <div class="main-login-form">
-          <div class="login-group">
-            <div class="form-group">
-              <label for="username">Username :</label>
-              <input type="email" name="email" id="username" v-model="email" />
-            </div>
-            <div class="form-group">
-              <label for="password">Password :</label>
-              <input
-                type="password"
-                name="password"
-                id="password"
-                v-model="password"
-              />
-            </div>
-            <button type="submit" class="btn-submit">login</button>
-          </div>
-        </div>
-        <div class="etc-login-form">
-          <p>Forgot your password ? <a href="#">click here</a></p>
-          <p>new User ? <a href="#">create new account</a></p>
-        </div>
-      </form>
-    </div>
-  </div>
+<div>
+<h1 class="title">Hover over the cards</h1>
+
+<div id="app" class="container">
+  <card data-image="https://images.unsplash.com/photo-1479660656269-197ebb83b540?dpr=2&auto=compress,format&fit=crop&w=1199&h=798&q=80&cs=tinysrgb&crop=">
+    <h1 slot="header">Canyons</h1>
+    <p slot="content">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+  </card>
+  <card data-image="https://images.unsplash.com/photo-1479659929431-4342107adfc1?dpr=2&auto=compress,format&fit=crop&w=1199&h=799&q=80&cs=tinysrgb&crop=">
+    <h1 slot="header">Beaches</h1>
+    <p slot="content">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+  </card>
+  <card data-image="https://images.unsplash.com/photo-1479644025832-60dabb8be2a1?dpr=2&auto=compress,format&fit=crop&w=1199&h=799&q=80&cs=tinysrgb&crop=">
+    <h1 slot="header">Trees</h1>
+    <p slot="content">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+  </card>
+  <card data-image="https://images.unsplash.com/photo-1479621051492-5a6f9bd9e51a?dpr=2&auto=compress,format&fit=crop&w=1199&h=811&q=80&cs=tinysrgb&crop=">
+    <h1 slot="header">Lakes</h1>
+    <p slot="content">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+  </card>
+</div>
+</div>
+  
 </template>
 <script>
-import jwt from "vue-jwt-decode";
+
 export default {
   name: "log",
   data() {
     return {
-      email: "",
-      password: "",
+     
     };
   },
-  methods: {
-    dologin: function () {
-      this.axios
-        .post(`${this.$apiurl}user/login`, {
-          email: this.email,
-          password: this.password,
-        })
-        .then((res) => {
-          if (res.data.auth) {
-            alert(res.data.auth);
-            localStorage.setItem("token", res.data.token);
-            var user = jwt.decode(res.data.token);
-            console.log(user);
-            if(user.role == "admin"){
-                this.$router.push({ name: "/admin/home"});
-            } else {
-                //this.$router.push({ name: "/admin/homeuser"});
-            }
-            /*   this.$router.push({ name: "profil" });
-            window.location.reload(); */
-          } else {
-            alert(res.data.auth);
-            /*  this.$router.push({
-              name: "register",
-              params: { msg: "non connecté" },
-            }); */
-          }
-        })
-        .catch((err) => {
-          console.log(err);
-        });
-    },
-  },
+ 
 };
 </script>
 
 <style scoped>
-.bg-color {
-  background-color: darkgrey;
+
+body {
+  margin: 40px 0;
+  font-family: "Raleway";
+  font-size: 14px;
+  font-weight: 500;
+  background-color: #bcaaa4;
+  -webkit-font-smoothing: antialiased;
+}
+
+.title {
+  font-family: "Raleway";
+  font-size: 24px;
+  font-weight: 700;
+  color: #5d4037;
   text-align: center;
 }
-.main-login-form {
-  position: relative;
-}
-.login-form {
-  max-width: 480px;
-  border-radius: 5px;
-  margin: 0 auto;
-}
-.form-group {
-  border: O;
-  box-shadow: 0 0 0;
-  background-color: transparent;
-  color: #555555;
-  padding: 7px 0;
-  font-weight: bold;
-  height: 25px;
+
+p {
+  line-height: 1.5em;
 }
 
-.btn-submit {
-  width: 220px;
-  height: 50px;
-  border: none;
-  outline: none;
-  color: #fff;
-  background: red;
+h1 + p,
+p + p {
+  margin-top: 10px;
+}
+
+.container {
+  padding: 40px 80px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.card-wrap {
+  margin: 10px;
+  transform: perspective(800px);
+  transform-style: preserve-3d;
   cursor: pointer;
-  position: relative;
-  z-index: 0;
-  border-radius: 10px;
 }
-
-.btn-submit:before {
-  content: "";
-  background: linear-gradient(
-    45deg,
-    #ff0000,
-    #ff7300,
-    #fffb00,
-    #48ff00,
-    #00ffd5,
-    #002bff,
-    #7a00ff,
-    #ff00c8,
-    #ff0000
-  );
-  position: absolute;
-  top: -2px;
-  left: -2px;
-  background-size: 400%;
-  z-index: -1;
-  filter: blur(5px);
-  width: calc(100% + 4px);
-  height: calc(100% + 4px);
-  animation: glowing 20s linear infinite;
-  opacity: 0;
-  transition: opacity 0.3s ease-in-out;
-  border-radius: 10px;
+.card-wrap:hover .card-info {
+  transform: translateY(0);
 }
-
-.btn-submit:active {
-  color: #000;
-}
-
-.btn-submit:active:after {
-  background: transparent;
-}
-
-.btn-submit:hover:before {
+.card-wrap:hover .card-info p {
   opacity: 1;
 }
+.card-wrap:hover .card-info,
+.card-wrap:hover .card-info p {
+  transition: 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+}
+.card-wrap:hover .card-info:after {
+  transition: 5s cubic-bezier(0.23, 1, 0.32, 1);
+  opacity: 1;
+  transform: translateY(0);
+}
+.card-wrap:hover .card-bg {
+  transition: 0.6s cubic-bezier(0.23, 1, 0.32, 1), opacity 5s cubic-bezier(0.23, 1, 0.32, 1);
+  opacity: 0.8;
+}
+.card-wrap:hover .card {
+  transition: 0.6s cubic-bezier(0.23, 1, 0.32, 1), box-shadow 2s cubic-bezier(0.23, 1, 0.32, 1);
+  box-shadow: rgba(255, 255, 255, 0.2) 0 0 40px 5px, white 0 0 0 1px, rgba(0, 0, 0, 0.66) 0 30px 60px 0, inset #333 0 0 0 5px, inset white 0 0 0 6px;
+}
 
-.btn-submit:after {
-  z-index: -1;
-  content: "";
+.card {
+  position: relative;
+  flex: 0 0 240px;
+  width: 240px;
+  height: 320px;
+  background-color: #333;
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow: rgba(0, 0, 0, 0.66) 0 30px 60px 0, inset #333 0 0 0 5px, inset rgba(255, 255, 255, 0.5) 0 0 0 6px;
+  transition: 1s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+}
+
+.card-bg {
+  opacity: 0.5;
   position: absolute;
+  top: -20px;
+  left: -20px;
   width: 100%;
   height: 100%;
-  background: #111;
-  left: 0;
-  top: 0;
-  border-radius: 10px;
+  padding: 20px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  transition: 1s cubic-bezier(0.445, 0.05, 0.55, 0.95), opacity 5s 1s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+  pointer-events: none;
 }
 
-@keyframes glowing {
-  0% {
-    background-position: 0 0;
-  }
-  50% {
-    background-position: 400% 0;
-  }
-  100% {
-    background-position: 0 0;
-  }
-}
-
-.etc-login-form p {
+.card-info {
+  padding: 20px;
+  position: absolute;
+  bottom: 0;
   color: #fff;
-  font: bolder;
+  transform: translateY(40%);
+  transition: 0.6s 1.6s cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+.card-info p {
+  opacity: 0;
+  text-shadow: black 0 2px 3px;
+  transition: 0.6s 1.6s cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+.card-info * {
+  position: relative;
+  z-index: 1;
+}
+.card-info:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 0;
+  width: 100%;
+  height: 100%;
+  background-image: linear-gradient(to bottom, transparent 0%, rgba(0, 0, 0, 0.6) 100%);
+  background-blend-mode: overlay;
+  opacity: 0;
+  transform: translateY(100%);
+  transition: 5s 1s cubic-bezier(0.445, 0.05, 0.55, 0.95);
 }
 
-.etc-login-form p a {
-  text-decoration: none;
-  color: #002bff;
+.card-info h1 {
+  font-family: "Playfair Display";
+  font-size: 36px;
+  font-weight: 700;
+  text-shadow: rgba(0, 0, 0, 0.5) 0 10px 10px;
 }
 </style>

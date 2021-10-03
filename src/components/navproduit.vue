@@ -1,41 +1,43 @@
 <template>
 <div>
-  <div class="Navbar">
-            <nav>
-                  <input type="checkbox" id="nav" class="hidden">
-                  <label for="nav" class="nav-btn">
-                        <i></i>
-                        <i></i>
-                        <i></i>
-                  </label>
-                  <div class="im" >
-                        <a href="#" class="alogo"><img src="../assets/TAILOR.png" alt="" class="logo" ></a>
-                  </div>
-                  <div class="nav-wrapper">
-                        <ul>
-                              <li><a href="/">Accueil</a></li>
-                              <li><a href="http://localhost:8080/blog">Blog</a></li>
-                              <li><a href="/panier">Panier</a></li>
-                              <li><a href="/navproduit"><i class="fas fa-cart-plus"></i>Boutique</a></li>
-                              <li><a href="/login"><i class="fas fa-user-circle"></i>Compte</a></li>
-                        </ul>
-                  </div>
-                  
-            </nav>
-</div>
-<div class="header">
-    <img src="../assets/zQaGxRSYck.jpg" alt="" class="imgpro">
-    <div class="imall">
-    <img src="../assets/image-produit-1.jpg" alt="" class="img1 im">
-    <img src="../assets/image-produit-3.jpg" alt="" class="img3 im">
-    <img src="../assets/image-produit-2.jpg" alt="" class="img2 im">
-    
+ <header>
+
+    <a href="#"><img src="../assets/TAILOR.png" alt=""  class="logo"></a>
+
+    <input type="checkbox" id="menu-bar">
+    <label for="menu-bar" class="fas fa-bars"></label>
+
+    <nav class="navbar">
+        <a href="/">Accueil</a>
+        <a href="/hairstylewordpress/">Réservation</a>
+        <a href="/blog">Blog</a>
+        <a href="/navproduit">Boutique</a>
+        <a href="/panier">Panier</a>
+        <a href="/login">Compte</a>
+       
+       
+    </nav>
+
+</header>
+
+<!-- header section ends -->
+
+<!-- home section starts  -->
+
+<section class="home" id="home">
+
+    <div class="contentF">
+        <h3>Soins  <span>Capilaires</span></h3>
     </div>
-</div>
+
+</section>
+
 
 
 <div>
+  <h1>Nos Produits</h1>
 <Produit/>
+<footerBlog/>
 </div>
 
   </div>
@@ -45,10 +47,12 @@
 
 <script>
 import Produit from '../views/Produit.vue'
+import footerBlog from '../components/footerBlog.vue'
 export default {
   name: "navproduit",
   components: {
-    Produit
+    Produit,
+     footerBlog
   },
   props: ["produits"],
   
@@ -115,324 +119,161 @@ export default {
 
 
 <style scoped>
-@media screen and (min-width: 1280px) {
-    .inputcher{
-        background-color: #7F6E6F;
-        font-size: 18px;
-    width: 569px;
-    height: 50px;
-    margin-left: 372px;
-    border: groove;
-    border-color: #1b0f1bfb;
-    box-shadow: -1px 11px 20px 11px#1a0e1afb;
-}
-    ::placeholder{
-        color: #fff;
-    }
-.imall{
-    margin-top: -44px;
-    text-align: -webkit-center;
-}
-.imgpro{
-    width: 100%;
-}
-.im{
-    width: 300px;
+h1{
+  text-align: center;
+  color:#ee82ee;
+    font-family: 'Parchment';
+    font-weight: 600;
+    font-size: 70px;
+    padding-top: 32px;
 }
 
 
-nav {
+.heading{
+    text-align: center;
+    background:var(--gradient);
+    color:#ee82ee;
+    -webkit-background-clip: text;
+    background-clip: text;
+    font-family: 'Parchment';
+    font-weight: 600;
+    font-size: 70px;
+    padding:25px;
+    
+}
+
+header{
+    position: fixed;
+    top:0; left:0;
+    width:100%;
+    background:rgba(247, 246, 246, 0.7);
+    box-shadow: 0 .5px 1px rgba(0,0,0,.1);
+    padding:2px 9%;
     display: flex;
-    justify-content: space-between;
     align-items: center;
-    height: 190px;
-    background-color: #ffffff;
-    box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.2);
-    padding: 0px 5%;
-}
-nav {
-      padding: 8px;
-}
-.logo {
-   width: 178px;
-   margin-left: 67px;
-}
-i.fas.fa-user-circle{
-    width: 25px;
-}
-i.fas.fa-cart-plus{
-    width: 25px;
-}
-.compte a{
-    text-decoration: none;
-     display: inline-block;
-    outline: none;
-    font-family: myriad pro regular;
-    color: #5b4461;
-    font-size: 20px;
-    font-weight: 700;
-    text-decoration: none;
+    justify-content: space-between;
+    z-index: 1000;
 }
 
+header .logo{
+    width: 151px;
+}
 
-nav ul {
+header .logo span{
+    color:var(--pink);
+}
+
+header .navbar a{
+    font-size: 17px;
+    margin-left: 27px;
+    color:var(--purple);
+}
+
+header .navbar a:hover{
+    color:var(--pink);
+}
+
+header input{
+    display: none;
+}
+
+header label{
+    font-size: 30px;
+    color:var(--purple);
+    cursor: pointer;
+    visibility: hidden;
+    opacity: 0;
+}
+
+.home{
     display: flex;
-    position: absolute;
-    left: 28%;
+    align-items: center;
+    justify-content: flex-end;
+    background:url("../assets/zQaGxRSYck.jpg") no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
 }
 
-nav ul li {
-      display: inline-block;
-      
-      margin-right: -17px;
+.home .imageF img{
+    width:40vw;
+    animation: float 3s linear infinite;
 }
 
-nav ul li:not(:first-child) {
-      margin-left: 48px;
+@keyframes float{
+    0%, 100%{
+        transform: translateY(4px);
+    }
+    50%{
+        transform: translateY(-9.5px);
+    }
 }
 
-nav ul li:last-child {
-      margin-right: 24px;
-}
-.nav-wrapper a.active,.nav-wrapper a:hover{
- background: #7F6E6F;
-    transition: .5s;
-    width: 113%;
-    height: 31px;
-    text-align: -webkit-center;
-    border-radius: 5px;
-    border: groove;
-}
-nav ul li a {
-      display: inline-block;
-    outline: none;
-    text-decoration: none;
-    font-family: myriad pro regular;
-    color: #5b4461;
-    font-size: 20px;
-    font-weight: 700;
-}
-#nav:checked + .nav-btn {
-      transform: rotate(45deg);
+.home .contentF h3{
+   font-size: 80.5px;
+    color: rgb(120, 177, 167);
+    text-transform: uppercase;
+    font-family: 'Galada';
+    margin-right: 305px;
 }
 
-#nav:checked + .nav-btn i {
-      background: #000;
-      transition: transform 0.2s ease;
+.home .contentF h3 span{
+    color:var(--pink);
+    text-transform: uppercase;
 }
 
-#nav:checked + .nav-btn i:nth-child(1) {
-      transform: translateY(6px) rotate(180deg);
-}
-
-#nav:checked + .nav-btn i:nth-child(2) {
-      opacity: 0;
-}
-
-#nav:checked + .nav-btn i:nth-child(3) {
-      transform: translateY(-6px) rotate(90deg);
-}
-
-#nav:checked ~ .nav-wrapper {
-      z-index: 9990;
-      opacity: 1;
-}
-
-#nav:checked ~ .nav-wrapper ul li a {
-      opacity: 1;
-      transform: translateX(0);
-}
-
-.hidden {
-      display: none;
+.home .contentF p{
+    font-size: 16.7px;
+    color:#666;
+    padding:1px 0;
 }
 /**FIN NAVBAR */
 
 
     
-}
-
-@media screen and (min-width: 768px) and (max-width: 1023.99px){
-
-     /**NAVBAR */
-
-.logo {
-   width: 178px;
-   padding-left: 60px;
-}
-i.fas.fa-user-circle{
-    width: 25px;
-}
-i.fas.fa-cart-plus{
-    width: 25px;
-}
-.compte a{
-    text-decoration: none;
-     display: inline-block;
-    outline: none;
-    font-family: myriad pro regular;
-    color: #5b4461;
-    font-size: 20px;
-    font-weight: 700;
-    text-decoration: none;
-}
 
 
+@media screen and (max-width: 900px){
 
-/**Menu burger */
-.nav-wrapper {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            z-index: -1;
-            background: #fff;
-            opacity: 0;
-            transition: all 0.2s ease;
-      }
-      .hidden {
-      display: none;
-}
+ header label{
+        visibility: visible;
+        opacity: 1;
+        
+    }
 
-      .nav-wrapper ul {
-            position: absolute;
-    top: 18%;
-    transform: translateY(-50%);
-    width: 89%;
-      }
-.nav-wrapper ul li {
-            display: block;
-            float: none;
-            width: 100%;
-            text-align: right;
-            margin-bottom: -16px;
-      }
+    header .navbar{
+        position: absolute;
+        top:11%; left: 0;
+        width:100%;
+        background:#fff;
+        padding:59px 2px;
+        border-top: .1px solid rgba(0,0,0,.2);
+        box-shadow: 0 .5px 1px rgba(0,0,0,.1);
+        transform-origin: top;
+        transform: scaleY(0);
+        opacity: 0;
+        transition: .2s linear;
+    }
 
-      .nav-wrapper ul li:nth-child(1) a {
-            transition-delay: 0.2s;
-      }
+    header .navbar a{
+        display: block;
+        margin:2px 0;
+        font-size: 12px;
+    }
 
-      .nav-wrapper ul li:nth-child(2) a {
-            transition-delay: 0.3s;
-      }
+    header input:checked ~ .navbar{
+        transform: scaleY(1);
+        opacity: 1;
+    }
 
-      .nav-wrapper ul li:nth-child(3) a {
-            transition-delay: 0.4s;
-      }
-.nav-wrapper ul li:nth-child(4) a {
-            transition-delay: 0.5s;
-      }
+    header input:checked ~ label::before{
+        content:'\f00d';
+    }
 
-      .nav-wrapper ul li:not(:first-child) {
-            margin-left: 0;
-      }
-
-      .nav-wrapper ul li a {
-            padding: 10px 24px;
-            opacity: 0;
-            color: #000;
-            font-size: 24px;
-            font-weight: 600;
-            letter-spacing: 1.2px;
-            transform: translateX(-20px);
-            transition: all 0.2s ease;
-      }
-
-      .nav-btn {
-            position: fixed;
-            right: 10px;
-            top: 10px;
-            display: block;
-            width: 48px;
-            height: 48px;
-            cursor: pointer;
-            z-index: 9999;
-            border-radius: 50%;
-      }
-
-      .nav-btn i {
-            display: block;
-            width: 20px;
-            height: 2px;
-            background: rgb(66, 55, 68);
-            border-radius: 2px;
-            margin-left: 14px;
-      }
-
-      .nav-btn i:nth-child(1) {
-            margin-top: 16px;
-      }
-
-      .nav-btn i:nth-child(2) {
-            margin-top: 4px;
-            opacity: 1;
-      }
-
-      .nav-btn i:nth-child(3) {
-            margin-top: 4px;
-      }
-
-nav ul li:not(:first-child) {
-      margin-left: 48px;
-}
-
-nav ul li:last-child {
-      margin-right: 24px;
-}
-.nav-wrapper a.active,.nav-wrapper a:hover{
- background: #7F6E6F;
-    transition: .5s;
-    width: 113%;
-    height: 31px;
-    text-align: -webkit-center;
-    border-radius: 5px;
-    border: groove;
-}
-nav ul li a {
-      display: inline-block;
-    outline: none;
-    color: rgba(255, 255, 255, 0.945);
-    text-decoration: none;
-    font-size: 13px;
-    font-family: "Crimson Text";
-    letter-spacing: 1.2px;
-    font-weight: 600;
-    text-transform: uppercase;
-}
-#nav:checked + .nav-btn {
-      transform: rotate(45deg);
-}
-
-#nav:checked + .nav-btn i {
-      background: #000;
-      transition: transform 0.2s ease;
-}
-
-#nav:checked + .nav-btn i:nth-child(1) {
-      transform: translateY(6px) rotate(180deg);
-}
-
-#nav:checked + .nav-btn i:nth-child(2) {
-      opacity: 0;
-}
-
-#nav:checked + .nav-btn i:nth-child(3) {
-      transform: translateY(-6px) rotate(90deg);
-}
-
-#nav:checked ~ .nav-wrapper {
-      z-index: 9990;
-      opacity: 1;
-}
-
-#nav:checked ~ .nav-wrapper ul li a {
-      opacity: 1;
-      transform: translateX(0);
-}
-/**FIN menu burger */
-
-/**FIN NAVBAR */
+   
 
 }
+
+
+
 </style>

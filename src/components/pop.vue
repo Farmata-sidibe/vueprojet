@@ -22,8 +22,8 @@
     </div>
 
     </div>
-    <a href="/registerCoiffeur"><button class="mt-3 dis" block @click="$bvModal.hide('bv-modal-example')">Ajouter</button></a>
-    <a href="/registerClient"><button class="mt-3 dos" block @click="$bvModal.hide('bv-modal-example')">S'inscrire</button></a>
+    <a href=""><button class="mt-3 dis" block @click="$bvModal.hide('bv-modal-example')">Ajouter</button></a>
+    <a href=""><button class="mt-3 dos" block @click="$bvModal.hide('bv-modal-example')">S'inscrire</button></a>
   </b-modal>
 </div>
   </div>
@@ -146,9 +146,7 @@ export default {
     padding: 0;
     width: 135px !important;
     font-weight: bold !important;
-    position: absolute !important;
-    top: 140px !important;
-    left: 65px !important;
+   margin: 77px 0px 0px 34px;
     border-color: #1f1220 !important;
     box-shadow: 0px 2px 9px 3px #2b1e2c !important;
     border-left-style: groove !important;

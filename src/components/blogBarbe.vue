@@ -13,27 +13,33 @@
 <div class="sectionBlog">
 
 <div class="article11">
-   <a href="/entretienBarbe">   <img src="../assets/la-barbe-entretenir.jpg" alt="" class="imgarc"> </a>
+    <router-link to="/entretienBarbe">
+  <img src="../assets/la-barbe-entretenir.jpg" alt="" class="imgarc">
     <div class="group">
     <p class="arc">articles, Barbe</p>
-   <a href="/entretienBarbe">   <h4 class="arcT">La barbe, comment bien l'entretenir</h4> </a>
+   <h4 class="arcT">La barbe, comment bien l'entretenir</h4> 
     </div>
+     </router-link>
 </div>
 
 <div class="article2">
-   <a href="/pousseBarbe">   <img src="../assets/pousser-sa-barbe.jpg" alt="" class="imgarc"> </a>
+    <router-link to="/pousseBarbe">
+  <img src="../assets/pousser-sa-barbe.jpg" alt="" class="imgarc">
     <div class="group">
     <p class="arc">articles, Barbe</p>
-   <a href="/pousseBarbe">   <h4 class="arcT">Comment faire pousser sa barbe?</h4> </a>
+   <h4 class="arcT">Comment faire pousser sa barbe?</h4>
     </div>
+     </router-link>
 </div>
 
 <div class="article3">
-    <a href="/trouBarbe">  <img src="../assets/trou-barbe-serum.jpg" alt="" class="imgarc"> </a>
+    <router-link to="/trouBarbe">
+   <img src="../assets/trou-barbe-serum.jpg" alt="" class="imgarc">
     <div class="group">
     <p class="arc">articles, Barbe</p>
-  <a href="/trouBarbe">  <h4 class="arcT">Trou dans la barbe: découvrez la solution</h4> </a>
+  <h4 class="arcT">Trou dans la barbe: découvrez la solution</h4>
     </div>
+    </router-link>
 </div>
 
 

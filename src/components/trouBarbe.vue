@@ -2,7 +2,7 @@
   <div>
 <navbar/>
 <a href="/blog" class="lien">Article, </a> 
-<a href="/blogCoiffure" class="lien2">Barbe</a>
+<a href="/blogBarbe" class="lien2">Barbe</a>
 
         <div class="al">
 <h1>Trou dans la barbe: Découvrez la solution</h1>
